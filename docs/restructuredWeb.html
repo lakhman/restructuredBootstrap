@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="theme-color" content="#583e7e">
+    <title>Installation - restructuredBootstrap & restructuredWeb</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/app.compiled.css?v=38462" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT: './',
+        VERSION: '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE: false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/webpack.entry.bundle.js?v=88186"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+
+    <style type="text/css">
+    #css-script-jumbotron { background: #8da9d0; }
+    </style>
+  </head>
+  <body class="restructuredWeb">
+    <header class="navbar navbar-default navbar-static-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" aria-expanded="false" data-toggle="offcanvas">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><span class="brand-rest">reStructured</span><span class="brand-bs">Bootstrap</span></a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav" role="tablist">
+                <li><a href="index.html">reStructured<b>Bootstrap</b></a></li>
+                <li class="active"><a href="#">reStructured<b>Web</b></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="basic-sphinx-bootstrap-setup.html">Setup & Usage</a></li>
+                <li>
+                    <button type="button" class="navbar-toggle" aria-expanded="false" data-toggle="offcanvas">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </header>
+    <aside class="navbar slideout-menu slideout-menu-left" role="navigation">
+        <ul class="nav navbar-nav">
+<li class="active"><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#adsense">Adsense <span class="fa fa-google fa-fw fa-pull-right text-muted"></span></a></li>
+<li><a class="reference internal" href="#codepen">Codepen <span class="fa fa-codepen fa-fw text-muted fa-pull-right"></span></a></li>
+<li><a class="reference internal" href="#code-block">Code Block <span class="fa fa-code fa-fw fa-pull-right text-muted"></span></a></li>
+<li><a class="reference internal" href="#css">CSS <span class="fa fa-css3 fa-fw fa-pull-right text-muted"></span></a></li>
+<li><a class="reference internal" href="#gist">Gist <span class="fa fa-github fa-fw text-muted fa-pull-right"></span></a></li>
+<li><a class="reference internal" href="#javascript">Javascript <span class="fa fa-code fa-fw fa-pull-right text-muted"></span></a></li>
+<li><a class="reference internal" href="#jsfiddle">JSFiddle <span class="fa fa-jsfiddle fa-fw text-muted fa-pull-right"></span></a></li>
+<li><a class="reference internal" href="#layout">Layout <span class="fa fa-tablet fa-fw fa-pull-right text-muted"></span></a></li>
+<li><a class="reference internal" href="#ted">Ted <span class="fa icon-ted fa-fw text-muted fa-pull-right"></span></a></li>
+<li><a class="reference internal" href="#twitter">Twitter <span class="fa fa-twitter fa-fw text-muted fa-pull-right"></span></a></li>
+<li><a class="reference internal" href="#youtube">Youtube <span class="fa fa-youtube fa-fw text-muted fa-pull-right"></span></a></li>
+</ul>
+
+    </aside>
+
+    <main class="slideout-panel slideout-panel-left">
+        <div id="main-content" class="container-fluid">
+              <div class="row">
+                  <div class="col-xs-12" role="main">
+                      <div>
+                          
+  <div class="section" id="installation">
+<div class="page-header"><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+</div><div class="literal-block-wrapper" id="id1">
+<div class="code-block-caption"><span class="caption-text"><span class="fa fa-code fa-fw"></span>Install the extension</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash literal-block"><div class="highlight"><pre><span></span>pip install restructuredWeb
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper" id="id2">
+<div class="code-block-caption"><span class="caption-text"><span class="fa fa-code fa-fw"></span>Update sphinx-project/conf.py</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-python literal-block"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># Import all components</span>
+    <span class="s1">&#39;restructuredWeb&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<a href="basic-sphinx-bootstrap-setup.html" class="btn btn-success" role="button"><span class="fa fa-cog fa-fw"></span> View sphinx setup</a>
+</div>
+<hr />
+<div class="section" id="adsense">
+<div class="page-header"><h1>Adsense<span class="fa fa-google fa-fw fa-pull-right text-muted"></span><a class="headerlink" href="#adsense" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item"><span class="fa fa-info-circle fa-fw text-muted"></span>Place adsense ads within your rest documents using the <code class="docutils literal"><span class="pre">adsense</span></code> directive</li>
+<li class="list-group-item"><span class="fa fa-link fa-fw text-muted"></span><a class="reference external" href="https://www.google.com/adsense">https://www.google.com/adsense</a></li>
+</ul>
+<div class="literal-block-wrapper" id="id3">
+<div class="code-block-caption"><span class="caption-text">conf.py</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-python literal-block"><div class="highlight"><pre><span></span><span class="c1"># Adsense config</span>
+<span class="n">adsense_client_id</span> <span class="o">=</span> <span class="s1">&#39;&lt;ca-pub-XXXXXXXXXXX&gt;&#39;</span>
+
+<span class="c1"># Named Slots</span>
+<span class="n">adsense_slots</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;named-slot-1&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;ADSENSE_ID&gt;&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;named-slot-2&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;ADSENSE_ID&gt;&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c1"># Add a default slot, used if no argument is passed</span>
+<span class="n">adsense_default_slot</span> <span class="o">=</span> <span class="s1">&#39;named-slot-1&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper" id="id4">
+<div class="code-block-caption"><span class="caption-text">layout.html</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-html literal-block"><div class="highlight"><pre><span></span><span class="c">&lt;!-- Add this into your layout.html --&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;(</span><span class="nx">adsbygoogle</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">adsbygoogle</span> <span class="o">||</span> <span class="p">[]).</span><span class="nx">push</span><span class="p">({});&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id5">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">adsense</span><span class="p">::</span> <span class="c">&lt;NamedAdSlot&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id6">
+<div class="code-block-caption"><span class="caption-text">This will default to config option “adsense_default_slot”</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">adsense</span><span class="p">::</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="highlight-html literal-block"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">ins</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;adsbygoogle&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;display:block&quot;</span> <span class="na">data-ad-client</span><span class="o">=</span><span class="s">&quot;ca-pub-XXXXXXXXXXX&quot;</span> <span class="na">data-ad-slot</span><span class="o">=</span><span class="s">&quot;123456789&quot;</span> <span class="na">data-ad-format</span><span class="o">=</span><span class="s">&quot;auto&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">ins</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id7">
+<div class="code-block-caption"><span class="caption-text">Contain it within a .wrapper</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">adsense</span><span class="p">::</span> post-inline
+  <span class="nc">:class:</span> <span class="nf">wrapper</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="highlight-html literal-block"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;wrapper&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ins</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;adsbygoogle&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;display:block&quot;</span> <span class="na">data-ad-client</span><span class="o">=</span><span class="s">&quot;ca-pub-XXXXXXXXXXX&quot;</span> <span class="na">data-ad-slot</span><span class="o">=</span><span class="s">&quot;123456789&quot;</span> <span class="na">data-ad-format</span><span class="o">=</span><span class="s">&quot;auto&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">ins</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="codepen">
+<div class="page-header"><h1>Codepen<span class="fa fa-codepen fa-fw text-muted fa-pull-right"></span><a class="headerlink" href="#codepen" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item"><span class="fa fa-link fa-fw text-muted"></span><a class="reference external" href="https://codepen.io/embeds">https://codepen.io/embeds</a></li>
+</ul>
+<p>You can set the default theme via your <code class="docutils literal"><span class="pre">conf.py</span></code></p>
+<div class="literal-block-wrapper" id="id8">
+<div class="code-block-caption"><span class="caption-text">conf.py</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="highlight-python literal-block"><div class="highlight"><pre><span></span><span class="c1"># Set the theme via a configuration value</span>
+<span class="n">codepen_theme</span> <span class="o">=</span> <span class="s1">&#39;light&#39;</span> <span class="c1"># or &#39;dark&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper" id="id9">
+<div class="code-block-caption"><span class="caption-text">layout.html</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="highlight-python literal-block"><div class="highlight"><pre><span></span><span class="c1"># Add the following snippet after your script files</span>
+<span class="o">&lt;</span><span class="n">script</span> <span class="n">async</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id10">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">codepen</span><span class="p">::</span> <span class="c">&lt;Embed URL&gt;</span>
+  <span class="nc">:height:</span> <span class="c">&lt;Integer&gt;</span>
+  <span class="nc">:preview:</span> <span class="c">&lt;Flag&gt; {# Load Preview #}</span>
+  <span class="nc">:theme:</span> <span class="c">&lt;Theme&gt; {# Light or dark - can be set via conf.py #}</span>
+  <span class="nc">:tabs:</span> <span class="c">&lt;CommaList&gt; [html,css,js,result]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id11">
+<div class="code-block-caption"><span class="caption-text">Embed with a custom height, preview and theme</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">codepen</span><span class="p">::</span> https://codepen.io/j_holtslander/pen/XmpMEp
+  <span class="nc">:preview:</span>
+  <span class="nc">:height:</span> <span class="nf">600px</span>
+  <span class="nc">:theme:</span> <span class="nf">dark</span>
+  <span class="nc">:tabs:</span> <span class="nf">js,result</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="rst-codepen"><p class="codepen" data-embed-version="2" data-height="600px" style="height: 600px;" data-slug-hash="XmpMEp" data-user="j_holtslander" data-theme-id="dark" data-preview="true" data-default-tab="js,result">https://codepen.io/j_holtslander/pen/XmpMEp</p></div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="code-block">
+<div class="page-header"><h1>Code Block<span class="fa fa-code fa-fw fa-pull-right text-muted"></span><a class="headerlink" href="#code-block" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item">Helpers to output formatted code and configuration formats</li>
+<li class="list-group-item"><span class="fa fa-link fa-fw text-muted"></span><a class="reference external" href="https://github.com/fabpot/sphinx-php">https://github.com/fabpot/sphinx-php</a></li>
+<li class="list-group-item"><span class="fa fa-link fa-fw text-muted"></span><a class="reference external" href="http://pygments.org/docs/lexers/">http://pygments.org/docs/lexers/</a></li>
+</ul>
+<p>You can set the default theme via your <code class="docutils literal"><span class="pre">conf.py</span></code></p>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id12">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id12" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="c">&lt;Language&gt;</span>
+    <span class="nc">:caption:</span> <span class="c">&lt;CaptionText&gt;</span>
+    <span class="nc">:emphasize-lines:</span> <span class="c">&lt;Lines&gt; {# 2,3,4 or 2-6 #}</span>
+    <span class="nc">:linenos:</span> <span class="c">&lt;Flag&gt;</span>
+    <span class="nc">:dedent:</span> <span class="c">&lt;Integer&gt; {# No of chars to dedent #}</span>
+
+<span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> <span class="c">&lt;FilePath&gt;</span>
+    <span class="nc">:language:</span> <span class="c">&lt;Language&gt;</span>
+    <span class="nc">:emphasize-lines:</span> <span class="c">&lt;Lines&gt; {# 2,3,4 or 2-6 #}</span>
+    <span class="nc">:linenos:</span> <span class="c">&lt;Flag&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id13">
+<div class="code-block-caption"><span class="caption-text">A simple code block</span><a class="headerlink" href="#id13" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">html</span>
+
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-xs-12&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Some HTML Content<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="highlight-html literal-block"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-xs-12&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Some HTML Content<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id14">
+<div class="code-block-caption"><span class="caption-text">A fancy code block with a caption and line numbers</span><a class="headerlink" href="#id14" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> python
+    <span class="nc">:caption:</span> <span class="nf">:fa:`file fw` touch ~/Desktop/project/some-file.py</span>
+    <span class="nc">:emphasize-lines:</span> <span class="nf">2,3</span>
+    <span class="nc">:linenos:</span>
+    <span class="nc">:dedent:</span> <span class="nf">4</span>
+
+        def a_function():
+            some_variable = &quot;Hello world!&quot;
+            print &#39;Hello world!&#39;
+
+<span class="cp">.. Note the &#39;dedent&#39; option</span>
+<span class="cp">.. Icons require the font-awesome role</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="literal-block-wrapper" id="id15">
+<div class="code-block-caption"><span class="caption-text"><span class="fa fa-file fa-fw"></span>touch ~/Desktop/project/some-file.py</span><a class="headerlink" href="#id15" title="Permalink to this code">¶</a></div>
+<div class="highlight-python literal-block"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">a_function</span><span class="p">():</span>
+<span class="hll">    <span class="n">some_variable</span> <span class="o">=</span> <span class="s2">&quot;Hello world!&quot;</span>
+</span><span class="hll">    <span class="k">print</span> <span class="s1">&#39;Hello world!&#39;</span>
+</span></pre></div>
+</td></tr></table></div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id16">
+<div class="code-block-caption"><span class="caption-text">Use a <code class="docutils literal"><span class="pre">..</span> <span class="pre">configuration-block::</span></code> to show configuration formats</span><a class="headerlink" href="#id16" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">configuration-block</span><span class="p">::</span>
+
+<span class="p">    ..</span> <span class="ow">code-block</span><span class="p">::</span> json
+        <span class="nc">:emphasize-lines:</span> <span class="nf">4,5</span>
+        <span class="nc">:linenos:</span>
+        <span class="nc">:dedent:</span> <span class="nf">4</span>
+
+            {
+              &quot;text&quot;: &quot;some text for line 1\nsome text for line 2\n&quot;,
+              &quot;array&quot;: [
+                &quot;item#1&quot;,
+                &quot;item#2&quot;
+              ],
+              &quot;object&quot;: {&quot;name&quot;: &quot;John&quot;, &quot;age&quot;: 24, &quot;is_human&quot;: true, &quot;height&quot;: 1.64}
+            }
+
+<span class="p">    ..</span> <span class="ow">code-block</span><span class="p">::</span> yaml
+        <span class="nc">:emphasize-lines:</span> <span class="nf">6-7</span>
+        <span class="nc">:linenos:</span>
+        <span class="nc">:dedent:</span> <span class="nf">4</span>
+
+            ---
+            text: |
+              some text for line 1
+              some text for line 2
+            array:
+            <span class="m">-</span> item#1
+            <span class="m">-</span> item#2
+            object:
+              name: John
+              age: 24
+              is_human: true
+              height: 1.64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="configuration-block">
+<ul>
+<li><em>JSON</em><div class="highlight-json literal-block"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;some text for line 1\nsome text for line 2\n&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;array&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="hll">    <span class="s2">&quot;item#1&quot;</span><span class="p">,</span>
+</span><span class="hll">    <span class="s2">&quot;item#2&quot;</span>
+</span>  <span class="p">],</span>
+  <span class="nt">&quot;object&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="nt">&quot;age&quot;</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="nt">&quot;is_human&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nt">&quot;height&quot;</span><span class="p">:</span> <span class="mf">1.64</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><em>YAML</em><div class="highlight-yaml literal-block"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="l l-Scalar l-Scalar-Plain">text</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">|</span>
+  <span class="no">some text for line 1</span>
+  <span class="no">some text for line 2</span>
+<span class="l l-Scalar l-Scalar-Plain">array</span><span class="p p-Indicator">:</span>
+<span class="hll"><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">item#1</span>
+</span><span class="hll"><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">item#2</span>
+</span><span class="l l-Scalar l-Scalar-Plain">object</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">John</span>
+  <span class="l l-Scalar l-Scalar-Plain">age</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">24</span>
+  <span class="l l-Scalar l-Scalar-Plain">is_human</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="l l-Scalar l-Scalar-Plain">height</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1.64</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id17">
+<div class="code-block-caption"><span class="caption-text">Use a <code class="docutils literal"><span class="pre">literalinclude</span></code> to include from external source files</span><a class="headerlink" href="#id17" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">configuration-block</span><span class="p">::</span>
+
+<span class="p">    ..</span> <span class="ow">literalinclude</span><span class="p">::</span> /web/code-examples/examples/swift-example.swift
+        <span class="nc">:language:</span> <span class="nf">swift</span>
+        <span class="nc">:emphasize-lines:</span> <span class="nf">13</span>
+        <span class="nc">:linenos:</span>
+
+<span class="p">    ..</span> <span class="ow">literalinclude</span><span class="p">::</span> /web/code-examples/examples/objectivec-example.m
+        <span class="nc">:language:</span> <span class="nf">objc</span>
+        <span class="nc">:emphasize-lines:</span> <span class="nf">15</span>
+        <span class="nc">:linenos:</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="configuration-block">
+<ul>
+<li><em>Swift</em><div class="highlight-swift literal-block"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">import</span> <span class="p">@</span><span class="nc">Header</span>
+
+<span class="kd">class</span> <span class="nc">Node</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">_viewController</span><span class="p">:</span> <span class="n">_viewController</span><span class="p">!</span>
+
+    <span class="kr">override</span> <span class="kd">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kc">super</span><span class="p">.</span><span class="kd">init</span><span class="p">()</span>
+    <span class="p">}</span>
+
+    <span class="kr">convenience</span> <span class="kd">init</span><span class="p">(</span><span class="n">model</span><span class="p">:</span> <span class="n">NodeModel</span><span class="p">)</span> <span class="kr">throws</span> <span class="p">{</span>
+        <span class="kc">self</span><span class="p">.</span><span class="kd">init</span><span class="p">()</span>
+
+<span class="hll">        <span class="kc">self</span><span class="p">.</span><span class="n">clipsToBounds</span> <span class="p">=</span> <span class="kc">true</span>
+</span>    <span class="p">}</span>
+
+    <span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kc">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;View controller log&quot;</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><em>Objective C</em><div class="highlight-objc literal-block"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#import &quot;HeaderFile1.h&quot;</span>
+
+<span class="k">@interface</span> <span class="nc">Node</span> <span class="p">()</span>
+<span class="p">{</span>
+    <span class="bp">UIViewController</span> <span class="o">*</span><span class="n">_viewController</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">@end</span>
+
+<span class="k">@implementation</span> <span class="nc">Node</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">instancetype</span><span class="p">)</span><span class="nf">init</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nb">self</span> <span class="o">=</span> <span class="p">[</span><span class="nb">super</span> <span class="n">init</span><span class="p">]))</span>
+        <span class="k">return</span> <span class="nb">nil</span><span class="p">;</span>
+
+<span class="hll">    <span class="nb">self</span><span class="p">.</span><span class="n">clipsToBounds</span> <span class="o">=</span> <span class="nb">YES</span><span class="p">;</span>
+</span>
+    <span class="k">return</span> <span class="nb">self</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didLoad</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="nb">super</span> <span class="n">didLoad</span><span class="p">];</span>
+
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;View controller log&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="k">@end</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="css">
+<div class="page-header"><h1>CSS<span class="fa fa-css3 fa-fw fa-pull-right text-muted"></span><a class="headerlink" href="#css" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item"><span class="fa fa-info-circle fa-fw text-muted"></span>Insert the provided CSS into this document only</li>
+</ul>
+<div class="literal-block-wrapper" id="id18">
+<div class="code-block-caption"><span class="caption-text">layout.html</span><a class="headerlink" href="#id18" title="Permalink to this code">¶</a></div>
+<div class="highlight-html+jinja literal-block"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">block</span> <span class="nv">extrahead</span> -<span class="cp">%}</span>
+    <span class="cp">{%</span>- <span class="k">if</span> <span class="nv">bootstrap_css_list</span> <span class="cp">%}</span>
+    <span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+    <span class="cp">{%</span> <span class="k">for</span> <span class="nv">css</span> <span class="k">in</span> <span class="nv">bootstrap_css_list</span> -<span class="cp">%}</span>
+    <span class="cp">{{</span> <span class="nv">css</span> <span class="cp">}}</span>
+    <span class="cp">{%</span> <span class="k">endfor</span> -<span class="cp">%}</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span>
+<span class="cp">{%</span>- <span class="k">endblock</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id19">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id19" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">css</span><span class="p">::</span>
+
+<span class="c">  &lt;Content&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id20">
+<div class="code-block-caption"><span class="caption-text">CSS rendered into the current document only</span><a class="headerlink" href="#id20" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">container</span><span class="p">::</span> jumbotron
+  <span class="nc">:name:</span> <span class="nf">css-script-jumbotron</span>
+
+  <span class="na">:h2:</span><span class="nv">`Custom styled jumbotron`</span>
+
+<span class="p">..</span> <span class="ow">css</span><span class="p">::</span>
+
+  #css-script-jumbotron { background: #8da9d0; }
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="jumbotron" id="css-script-jumbotron">
+<p class="h2">Custom styled jumbotron</p>
+
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="gist">
+<div class="page-header"><h1>Gist<span class="fa fa-github fa-fw text-muted fa-pull-right"></span><a class="headerlink" href="#gist" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item"><span class="fa fa-link fa-fw text-muted"></span><a class="reference external" href="https://help.github.com/articles/about-gists/#embedding-gists">https://help.github.com/articles/about-gists/#embedding-gists</a></li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id21">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id21" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">gist</span><span class="p">::</span> <span class="c">&lt;URL&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">gist</span><span class="p">::</span> https://gist.github.com/lakhman/b6e42563a15bc71827f5b0ead82aa886
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="rst-gist"><script src="https://gist.github.com/lakhman/b6e42563a15bc71827f5b0ead82aa886.js"></script></div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="javascript">
+<div class="page-header"><h1>Javascript<span class="fa fa-code fa-fw fa-pull-right text-muted"></span><a class="headerlink" href="#javascript" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item"><span class="fa fa-info-circle fa-fw text-muted"></span>Insert the provided Javascript into this document only</li>
+</ul>
+<div class="literal-block-wrapper" id="id22">
+<div class="code-block-caption"><span class="caption-text">layout.html</span><a class="headerlink" href="#id22" title="Permalink to this code">¶</a></div>
+<div class="highlight-html+jinja literal-block"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">block</span> <span class="nv">extrahead</span> -<span class="cp">%}</span>
+    <span class="cp">{%</span>- <span class="k">if</span> <span class="nv">bootstrap_js_list</span> <span class="cp">%}</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
+    <span class="cp">{%</span> <span class="k">for</span> <span class="nv">js</span> <span class="k">in</span> <span class="nv">bootstrap_js_list</span> -<span class="cp">%}</span>
+    <span class="cp">{{</span> <span class="nv">js</span> <span class="cp">}}</span>
+    <span class="cp">{%</span> <span class="k">endfor</span> -<span class="cp">%}</span>
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span>
+<span class="cp">{%</span>- <span class="k">endblock</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id23">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id23" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">javascript</span><span class="p">::</span>
+
+<span class="c">  &lt;Content&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id24">
+<div class="code-block-caption"><span class="caption-text">JS rendered into the current document only</span><a class="headerlink" href="#id24" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">container</span><span class="p">::</span> jumbotron
+  <span class="nc">:name:</span> <span class="nf">js-script-jumbotron</span>
+
+<span class="p">  ..</span> <span class="ow">button</span><span class="p">::</span> <span class="na">:fa:</span><span class="nv">`mouse-pointer fw`</span> Click Me!
+    <span class="nc">:class:</span> <span class="nf">primary large block</span>
+    <span class="nc">:name:</span> <span class="nf">custom-button-for-doc</span>
+
+<span class="p">..</span> <span class="ow">javascript</span><span class="p">::</span>
+
+    $(&#39;#custom-button-for-doc&#39;).click(function(){
+        alert(&#39;Custom javascript for this document only&#39;)
+    })
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="jumbotron" id="js-script-jumbotron">
+<button class="btn btn-default btn-block primary large" id="custom-button-for-doc" type="button"><span class="fa fa-mouse-pointer fa-fw"></span>Click Me!</button>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="jsfiddle">
+<div class="page-header"><h1>JSFiddle<span class="fa fa-jsfiddle fa-fw text-muted fa-pull-right"></span><a class="headerlink" href="#jsfiddle" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item"><span class="fa fa-link fa-fw text-muted"></span><a class="reference external" href="http://doc.jsfiddle.net/use/embedding.html">http://doc.jsfiddle.net/use/embedding.html</a></li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id25">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id25" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">jsfiddle</span><span class="p">::</span> <span class="c">&lt;Embed_URL&gt;</span>
+  <span class="nc">:height:</span> <span class="c">&lt;Height&gt; [600, 600px]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id26">
+<div class="code-block-caption"><span class="caption-text">Embed with a custom height</span><a class="headerlink" href="#id26" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">jsfiddle</span><span class="p">::</span> //jsfiddle.net/DTcHh/embedded/result,html/
+  <span class="nc">:height:</span> <span class="nf">600px</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="rst-jsfiddle">
+<iframe src="//jsfiddle.net/DTcHh/embedded/result,html/" width="99.9%" height="600px" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="layout">
+<div class="page-header"><h1>Layout<span class="fa fa-tablet fa-fw fa-pull-right text-muted"></span><a class="headerlink" href="#layout" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item">This extension allows you to switch the current document layout, from sidebar to full-page for example</li>
+<li class="list-group-item">Sphinx always uses <code class="docutils literal"><span class="pre">page.html</span></code>, you can create your own and use it on a per document basis</li>
+</ul>
+<p>Add the following <code class="docutils literal"><span class="pre">page-custom.html</span></code> template which extends from a different layout</p>
+<div class="literal-block-wrapper" id="id27">
+<div class="code-block-caption"><span class="caption-text">_templates/page-custom.html</span><a class="headerlink" href="#id27" title="Permalink to this code">¶</a></div>
+<div class="highlight-html+jinja literal-block"><div class="highlight"><pre><span></span><span class="cp">{%</span>- <span class="k">extends</span> <span class="s2">&quot;layout-sidebar.html&quot;</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">body</span> <span class="cp">%}</span>
+    <span class="cp">{{</span> <span class="nv">body</span> <span class="cp">}}</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id28">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id28" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">layout</span><span class="p">::</span> <span class="c">&lt;Page Layout File&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">layout</span><span class="p">::</span> page-custom.html
+</pre></div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="highlight-html literal-block"><div class="highlight"><pre><span></span><span class="c">&lt;!-- Will render the document into page-custom.html instead of page.html --&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="ted">
+<div class="page-header"><h1>Ted<span class="fa icon-ted fa-fw text-muted fa-pull-right"></span><a class="headerlink" href="#ted" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item">Embed TED talks easily using the <code class="docutils literal"><span class="pre">ted</span></code> directive</li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id29">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id29" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">ted</span><span class="p">::</span> <span class="c">&lt;URL&gt;</span>
+  <span class="nc">:4by3:</span> <span class="c">&lt;Flag&gt; {# default: 16by9 #}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">ted</span><span class="p">::</span> https://www.ted.com/talks/richard_feynman
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="embed-responsive embed-responsive-16by9">
+<iframe frameborder="0" scrolling="no" allowfullscreen src="https://embed.ted.com/talks/richard_feynman"></iframe>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="twitter">
+<div class="page-header"><h1>Twitter<span class="fa fa-twitter fa-fw text-muted fa-pull-right"></span><a class="headerlink" href="#twitter" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item"><span class="fa fa-info-circle fa-fw text-muted"></span>Add this CSS: <a class="reference external" href="https://dev.twitter.com/web/embedded-tweets/css">https://dev.twitter.com/web/embedded-tweets/css</a></li>
+</ul>
+<div class="literal-block-wrapper" id="id30">
+<div class="code-block-caption"><span class="caption-text">layout.html</span><a class="headerlink" href="#id30" title="Permalink to this code">¶</a></div>
+<div class="highlight-html+jinja literal-block"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;//platform.twitter.com/widgets.js&quot;</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id31">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id31" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">twitter-tweet</span><span class="p">::</span> <span class="c">&lt;TweetID&gt;</span>
+  <span class="nc">:id:</span> <span class="c">&lt;TweetID&gt;</span>
+  <span class="nc">:text:</span> <span class="c">&lt;Text&gt; {# PlaceholderText #}</span>
+  <span class="nc">:date:</span> <span class="c">&lt;Text&gt; {# PlaceholderDate #}</span>
+  <span class="nc">:author:</span> <span class="c">&lt;Text&gt; {# PlaceholderAuthor #}</span>
+  <span class="nc">:align:</span> <span class="c">&lt;Alignment&gt; [left, center, right]</span>
+  <span class="nc">:dark:</span> <span class="c">&lt;Flag&gt; {# Dark themed tweet #}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id32">
+<div class="code-block-caption"><span class="caption-text">By default, all tweets are <code class="docutils literal"><span class="pre">center</span></code> aligned</span><a class="headerlink" href="#id32" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">twitter-tweet</span><span class="p">::</span> jack/20
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<blockquote class="twitter-tweet tw-align-center" data-id="20" data-lang="en">
+<p lang="en" dir="ltr">https://twitter.com/jack/status/20</p> <a href="https://twitter.com/jack/status/20">@jack</a></blockquote>
+<div class="clearfix"></div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id33">
+<div class="code-block-caption"><span class="caption-text">Demonstration of other options</span><a class="headerlink" href="#id33" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">twitter-tweet</span><span class="p">::</span> CIA/474971393852182528
+    <span class="nc">:align:</span> <span class="nf">right</span>
+    <span class="nc">:text:</span> <span class="nf">We can neither confirm nor deny that this is our first tweet.</span>
+    <span class="nc">:dark:</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<blockquote class="twitter-tweet tw-align-right" data-id="474971393852182528" data-lang="en" data-theme="dark">
+<p lang="en" dir="ltr">We can neither confirm nor deny that this is our first tweet.</p> <a href="https://twitter.com/CIA/status/474971393852182528">@CIA</a></blockquote>
+<div class="clearfix"></div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id34">
+<div class="code-block-caption"><span class="caption-text">When set to hidden, links in a Tweet are not expanded to photo, video, or link previews</span><a class="headerlink" href="#id34" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">twitter-tweet</span><span class="p">::</span> hoesluvfreewifi/899703073484013568
+  <span class="nc">:cards:</span> <span class="nf">hidden</span>
+<span class="hll">  <span class="nc">:link-color:</span> <span class="nf">#d14</span>
+</span></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<blockquote class="twitter-tweet tw-align-center" data-cards="hidden" data-id="899703073484013568" data-lang="en" data-link-color="#d14">
+<p lang="en" dir="ltr">https://twitter.com/hoesluvfreewifi/status/899703073484013568</p> <a href="https://twitter.com/hoesluvfreewifi/status/899703073484013568">@hoesluvfreewifi</a></blockquote>
+<div class="clearfix"></div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">twitter-tweet</span><span class="p">::</span> hoesluvfreewifi/899703073484013568
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<blockquote class="twitter-tweet tw-align-center" data-id="899703073484013568" data-lang="en">
+<p lang="en" dir="ltr">https://twitter.com/hoesluvfreewifi/status/899703073484013568</p> <a href="https://twitter.com/hoesluvfreewifi/status/899703073484013568">@hoesluvfreewifi</a></blockquote>
+<div class="clearfix"></div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">twitter-tweet</span><span class="p">::</span> elonmusk/916234148104118272
+<span class="hll">  <span class="nc">:conversation:</span> <span class="nf">none</span>
+</span></pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<blockquote class="twitter-tweet tw-align-center" data-conversation="none" data-id="916234148104118272" data-lang="en">
+<p lang="en" dir="ltr">https://twitter.com/elonmusk/status/916234148104118272</p> <a href="https://twitter.com/elonmusk/status/916234148104118272">@elonmusk</a></blockquote>
+<div class="clearfix"></div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">twitter-tweet</span><span class="p">::</span> elonmusk/916234148104118272
+  <span class="nc">:link-color:</span> <span class="nf">#d14</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<blockquote class="twitter-tweet tw-align-center" data-id="916234148104118272" data-lang="en" data-link-color="#d14">
+<p lang="en" dir="ltr">https://twitter.com/elonmusk/status/916234148104118272</p> <a href="https://twitter.com/elonmusk/status/916234148104118272">@elonmusk</a></blockquote>
+<div class="clearfix"></div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="youtube">
+<div class="page-header"><h1>Youtube<span class="fa fa-youtube fa-fw text-muted fa-pull-right"></span><a class="headerlink" href="#youtube" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item"><span class="fa fa-youtube fa-fw text-muted"></span><a class="reference external" href="https://developers.google.com/youtube/player_parameters">https://developers.google.com/youtube/player_parameters</a></li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id35">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id35" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">youtube</span><span class="p">::</span> <span class="c">&lt;YouTubeID&gt;</span>
+  <span class="nc">:class:</span> <span class="c">&lt;Classes&gt;</span>
+  <span class="nc">:4by3:</span> <span class="c">&lt;Flag&gt; {# Show as 4by3, 16by9 default #}</span>
+
+  <span class="nc">:autohide:</span> <span class="c">&lt;YouTube_Player_Parameter&gt;</span>
+  <span class="nc">:autoplay:</span> <span class="c">&lt;YouTube_Player_Parameter&gt;</span>
+  <span class="nc">:cc_load_policy:</span> <span class="c">&lt;YouTube_Player_Parameter&gt;</span>
+  <span class="nc">:color:</span> <span class="c">&lt;YouTube_Player_Parameter&gt;</span>
+  <span class="nc">:controls:</span> <span class="c">&lt;YouTube_Player_Parameter&gt;</span>
+  <span class="nc">:disablekb:</span> <span class="c">&lt;YouTube_Player_Parameter&gt;</span>
+  <span class="nc">:enablejsapi:</span> <span class="c">&lt;YouTube_Player_Parameter&gt;</span>
+  <span class="nc">:end:</span> <span class="c">&lt;YouTube_Player_Parameter&gt;</span>
+  <span class="nc">:fs:</span> <span class="c">&lt;YouTube_Player_Parameter&gt;</span>
+  <span class="nc">:hl:</span> <span class="c">&lt;YouTube_Player_Parameter&gt;</span>
+  <span class="nc">:iv_load_policy:</span> <span class="c">&lt;YouTube_Player_Parameter&gt;</span>
+  <span class="nc">:list:</span> <span class="c">&lt;YouTube_Player_Parameter&gt;</span>
+  <span class="nc">:listtype:</span> <span class="c">&lt;YouTube_Player_Parameter&gt;</span>
+  <span class="nc">:loop:</span> <span class="c">&lt;YouTube_Player_Parameter&gt;</span>
+  <span class="nc">:modestbranding:</span> <span class="c">&lt;YouTube_Player_Parameter&gt;</span>
+  <span class="nc">:playlist:</span> <span class="c">&lt;YouTube_Player_Parameter&gt;</span>
+  <span class="nc">:rel:</span> <span class="c">&lt;YouTube_Player_Parameter&gt;</span>
+  <span class="nc">:showinfo:</span> <span class="c">&lt;YouTube_Player_Parameter&gt;</span>
+  <span class="nc">:start:</span> <span class="c">&lt;YouTube_Player_Parameter&gt;</span>
+  <span class="nc">:theme:</span> <span class="c">&lt;YouTube_Player_Parameter&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">youtube</span><span class="p">::</span>
+  <span class="nc">:listtype:</span> <span class="nf">search</span>
+  <span class="nc">:list:</span> <span class="nf">deep learning</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="embed-responsive embed-responsive-16by9"><iframe allowfullscreen frameborder="0" src="https://www.youtube.com/embed?list=deep+learning&listType=search"></iframe></div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+
+
+                      </div>
+                  </div>
+              </div>
+        </div>
+    </main>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="footer well" role="contentinfo">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6 text-left">
+                            <a href="https://github.com/lakhman/restructuredBootstrap"><span class="fa fa-github"></span> Star us on Github</a>
+                        </div>
+                        <div class="col-xs-12 col-md-6 text-right">
+                                &#169; Copyright 2017, Anil Lakhman.
+                              Created using <a href="http://sphinx-doc.org/">Sphinx 1.6.3</a>.
+                        </div>
+                    </div>
+                </div>
+                <div class="sizer">
+                    <div class="device-check visible-xs" data-device="xs" data-order="1"></div>
+                    <div class="device-check visible-sm" data-device="sm" data-order="2"></div>
+                    <div class="device-check visible-md" data-device="md" data-order="3"></div>
+                    <div class="device-check visible-lg" data-device="lg" data-order="4"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script type="text/javascript">
+$('#custom-button-for-doc').click(function(){
+        alert('Custom javascript for this document only')
+    })
+</script>
+  <script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script async defer src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+  </body>
+</html>

@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="theme-color" content="#583e7e">
+    <title>Install Sphinx - restructuredBootstrap & restructuredWeb</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/app.compiled.css?v=73783" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT: './',
+        VERSION: '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE: false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/webpack.entry.bundle.js?v=2062"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+
+  </head>
+  <body class="basic-sphinx-bootstrap-setup">
+    <header class="navbar navbar-default navbar-static-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" aria-expanded="false" data-toggle="offcanvas">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><span class="brand-rest">reStructured</span><span class="brand-bs">Bootstrap</span></a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav" role="tablist">
+                <li><a href="index.html">reStructured<b>Bootstrap</b></a></li>
+                <li><a href="restructuredWeb.html">reStructured<b>Web</b></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#">Setup & Usage</a></li>
+                <li>
+                    <button type="button" class="navbar-toggle" aria-expanded="false" data-toggle="offcanvas">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </header>
+    <aside class="navbar slideout-menu slideout-menu-left" role="navigation">
+        <ul class="nav navbar-nav">
+<li class="active"><a class="reference internal" href="#install-sphinx">Install Sphinx</a></li>
+<li><a class="reference internal" href="#create-a-sphinx-project">Create a sphinx project</a></li>
+<li><a class="reference internal" href="#override-the-basic-theme">Override the basic theme</a></li>
+<li class="dropdown"><a class="dropdown-toggle reference internal" data-target="#add-a-custom-theme" href="#add-a-custom-theme">Add a custom theme <span class="fa fa-fw fa-pull-right fa-caret-down"></span></a><ul class="nav navbar-nav dropdown-menu">
+<li><a class="reference internal" href="#create-a-theme">Create a theme</a></li>
+<li><a class="reference internal" href="#update-layout-blocks">Update layout blocks</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#add-some-demo-content">Add some demo content</a></li>
+<li><a class="reference internal" href="#setup-webpack">Setup Webpack</a></li>
+</ul>
+
+    </aside>
+
+    <main class="slideout-panel slideout-panel-left">
+        <div id="main-content" class="container-fluid">
+              <div class="row">
+                  <div class="col-xs-12" role="main">
+                      <div>
+                          
+  <div class="section" id="install-sphinx">
+<span id="advanced-usage-sphinx"></span><div class="page-header"><h1>Install Sphinx<a class="headerlink" href="#install-sphinx" title="Permalink to this headline">¶</a></h1>
+</div><div class="literal-block-wrapper" id="id1">
+<div class="code-block-caption"><span class="caption-text">Install everything</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash literal-block"><div class="highlight"><pre><span></span><span class="c1"># Install (or update) all extensions</span>
+pip install restructuredBootstrap restructuredWeb sphinx -U
+
+
+python setup.py sdist
+pip install dist/restructuredBootstrap-0.1.0.tar.gz
+
+pip uninstall restructuredBootstrap restructuredWeb
+</pre></div>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="create-a-sphinx-project">
+<div class="page-header"><h1>Create a sphinx project<a class="headerlink" href="#create-a-sphinx-project" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-6">
+<div class="literal-block-wrapper" id="id2">
+<div class="code-block-caption"><span class="caption-text">Setup a sphinx project with our extensions</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash literal-block"><div class="highlight"><pre><span></span><span class="nv">NEW_PROJECT_NAME</span><span class="o">=</span><span class="s2">&quot;sphinx-project&quot;</span>
+<span class="nv">NEW_PROJECT_AUTHOR</span><span class="o">=</span><span class="s2">&quot;Anil&quot;</span>
+
+sphinx-quickstart <span class="se">\</span>
+    --project<span class="o">=</span><span class="nv">$NEW_PROJECT_NAME</span> <span class="se">\</span>
+    --author<span class="o">=</span><span class="nv">$NEW_PROJECT_AUTHOR</span> <span class="se">\</span>
+    --extensions<span class="o">=</span>restructuredBootstrap,restructuredWeb <span class="se">\</span>
+    --quiet <span class="se">\</span>
+    <span class="nv">$NEW_PROJECT_NAME</span>
+<span class="nb">cd</span> <span class="nv">$NEW_PROJECT_NAME</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper" id="id3">
+<div class="code-block-caption"><span class="caption-text">Build it</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash literal-block"><div class="highlight"><pre><span></span>make html
+open _build/html/index.html
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper" id="id4">
+<div class="code-block-caption"><span class="caption-text">Open the project in your favourite editor</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash literal-block"><div class="highlight"><pre><span></span><span class="c1"># Pycharm (if you&#39;ve set a command line launcher)</span>
+pycharm .
+
+<span class="c1"># Sublime</span>
+subl .
+
+<span class="c1"># Textmate</span>
+mate .
+
+<span class="c1"># Visual studio</span>
+code .
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 text-center">
+<div class="figure" id="id5">
+<a class="reference external image-reference" href="_images/sphinx-alabaster.jpg"><img alt="This is what your should see at this point." class="img-thumbnail" src="_images/sphinx-alabaster.jpg" /></a>
+<p class="caption"><span class="caption-text">This is what your should see at this point.</span></p>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="override-the-basic-theme">
+<div class="page-header"><h1>Override the basic theme<a class="headerlink" href="#override-the-basic-theme" title="Permalink to this headline">¶</a></h1>
+</div><ul class="list-group">
+<li class="list-group-item"><span class="fa fa-link fa-fw"></span> <a class="reference external" href="http://www.sphinx-doc.org/en/stable/config.html">http://www.sphinx-doc.org/en/stable/config.html</a></li>
+<li class="list-group-item"><span class="fa fa-link fa-fw"></span> <a class="reference external" href="http://www.sphinx-doc.org/en/stable/theming.html">http://www.sphinx-doc.org/en/stable/theming.html</a></li>
+</ul>
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+<div class="literal-block-wrapper" id="id6">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal"><span class="pre">conf.py</span></code> - Change the <code class="docutils literal"><span class="pre">html_theme</span></code> to <code class="docutils literal"><span class="pre">basic</span></code></span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash literal-block"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>86
+87
+88
+89</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># html_theme = &#39;alabaster&#39;</span>
+<span class="nv">html_theme</span> <span class="o">=</span> <span class="s1">&#39;basic&#39;</span>
+
+<span class="c1"># sed -i &quot;s/html_theme = &#39;alabaster&#39;/\html_theme = &#39;basic&#39;/g&quot; conf.py</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="literal-block-wrapper" id="id7">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal"><span class="pre">conf.py</span></code> - Update the <code class="docutils literal"><span class="pre">html_sidebars</span></code> to show the toc and search</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash literal-block"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nv">html_sidebars</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="c1"># Delete these, they&#39;re only used with the alabaster theme</span>
+    <span class="c1"># &#39;**&#39;: [</span>
+    <span class="c1">#     &#39;about.html&#39;,</span>
+    <span class="c1">#     &#39;navigation.html&#39;,</span>
+    <span class="c1">#     &#39;relations.html&#39;,  # needs &#39;show_related&#39;: True theme option to display</span>
+    <span class="c1">#     &#39;searchbox.html&#39;,</span>
+    <span class="c1">#     &#39;donate.html&#39;,</span>
+    <span class="c1"># ],</span>
+    <span class="c1"># &#39;**&#39;: [],  # `render_sidebar` in templates will be False</span>
+    <span class="s1">&#39;**&#39;</span>: <span class="o">[</span><span class="s1">&#39;localtoc.html&#39;</span>, <span class="s1">&#39;searchbox.html&#39;</span><span class="o">]</span>
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="literal-block-wrapper" id="id8">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal"><span class="pre">conf.py</span></code> - Add the following to setup the template resources</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash literal-block"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># A dictionary of values to pass into the template engine’s context for all</span>
+<span class="c1"># pages. Single values can also be put in this dictionary using the -A</span>
+<span class="c1"># command-line option of sphinx-build.</span>
+<span class="nv">html_context</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="s1">&#39;html5_doctype&#39;</span>: True,
+    <span class="s1">&#39;html_tag&#39;</span>: <span class="s1">&#39;&lt;html&gt;&#39;</span>,
+    <span class="s1">&#39;css_files&#39;</span>: <span class="o">[</span>
+        <span class="s1">&#39;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&#39;</span>,
+        <span class="s1">&#39;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#39;</span>,
+    <span class="o">]</span>,
+    <span class="s1">&#39;script_files&#39;</span>: <span class="o">[</span>
+        <span class="s1">&#39;https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&#39;</span>,
+        <span class="s1">&#39;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js&#39;</span>
+    <span class="o">]</span>
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="literal-block-wrapper" id="id9">
+<div class="code-block-caption"><span class="caption-text">Override the existing <code class="docutils literal"><span class="pre">basic/layout.html</span></code> and give the body a <code class="docutils literal"><span class="pre">.container</span></code> class</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash literal-block"><div class="highlight"><pre><span></span><span class="c1"># Fetch layout.html to be customized</span>
+wget -O _templates/layout.html https://raw.githubusercontent.com/sphinx-doc/sphinx/master/sphinx/themes/basic/layout.html
+wget -O _templates/page.html https://raw.githubusercontent.com/sphinx-doc/sphinx/master/sphinx/themes/basic/page.html
+
+<span class="c1"># Fetch our sidebar templates</span>
+wget -O _templates/localtoc.html https://raw.githubusercontent.com/sphinx-doc/sphinx/master/sphinx/themes/basic/localtoc.html
+wget -O _templates/searchbox.html https://raw.githubusercontent.com/sphinx-doc/sphinx/master/sphinx/themes/basic/searchbox.html
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="literal-block-wrapper" id="id10">
+<div class="code-block-caption"><span class="caption-text">Build it</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash literal-block"><div class="highlight"><pre><span></span>make html
+open _build/html/index.html
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 text-center">
+<div class="figure" id="id11">
+<a class="reference external image-reference" href="_images/sphinx-override-basic.jpg"><img alt="You should see a bare sphinx theme." class="img-thumbnail" src="_images/sphinx-override-basic.jpg" /></a>
+<p class="caption"><span class="caption-text">You should see a bare sphinx theme.</span></p>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="add-a-custom-theme">
+<div class="page-header"><h1>Add a custom theme<a class="headerlink" href="#add-a-custom-theme" title="Permalink to this headline">¶</a></h1>
+</div><p>At this point, we’re overriding the <code class="docutils literal"><span class="pre">basic</span></code> theme provided by sphinx.</p>
+<p>Let’s create our own named <code class="docutils literal"><span class="pre">app</span></code>.</p>
+<ul>
+<li><a class="reference external" href="https://github.com/sphinx-doc/sphinx/tree/master/sphinx/themes/basic">https://github.com/sphinx-doc/sphinx/tree/master/sphinx/themes/basic</a></li>
+<li><a class="reference external" href="https://stackoverflow.com/questions/14622698/customize-sphinxdoc-theme">https://stackoverflow.com/questions/14622698/customize-sphinxdoc-theme</a></li>
+</ul>
+<hr />
+<div class="section" id="create-a-theme">
+<h2>Create a theme<a class="headerlink" href="#create-a-theme" title="Permalink to this headline">¶</a></h2>
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+<div class="literal-block-wrapper" id="id12">
+<div class="code-block-caption"><span class="caption-text">Create the directory structure for our <code class="docutils literal"><span class="pre">app</span></code> theme</span><a class="headerlink" href="#id12" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash literal-block"><div class="highlight"><pre><span></span>mkdir -p _themes/app/static
+mv _templates/* _themes/app/
+touch _themes/app/static/style.css
+touch _themes/app/theme.conf
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper" id="id13">
+<div class="code-block-caption"><span class="caption-text">Add our theme options to theme.conf</span><a class="headerlink" href="#id13" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash literal-block"><div class="highlight"><pre><span></span>cat &lt;&lt;<span class="s1">&#39;-EOF&#39;</span> &gt; _themes/app/theme.conf
+<span class="o">[</span>theme<span class="o">]</span>
+<span class="nv">inherit</span> <span class="o">=</span> basic
+<span class="nv">stylesheet</span> <span class="o">=</span> style.css
+<span class="nv">pygments_style</span> <span class="o">=</span> pygments.css
+-EOF
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper" id="id14">
+<div class="code-block-caption"><span class="caption-text">Create a empty stylesheet importing our basic.css</span><a class="headerlink" href="#id14" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash literal-block"><div class="highlight"><pre><span></span>cat &lt;&lt;<span class="s1">&#39;-EOF&#39;</span> &gt; _themes/app/static/style.css
+/**
+ * Note: basic.css floats the sidebar, so you may not see it
+ * @import url<span class="o">(</span><span class="s2">&quot;basic.css&quot;</span><span class="o">)</span><span class="p">;</span>
+ */
+
+a.headerlink <span class="o">{</span>font-size: <span class="m">80</span>%<span class="p">;</span> color: <span class="c1">#ccc;}</span>
+
+-EOF
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper" id="id15">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal"><span class="pre">conf.py</span></code> - Update your <code class="docutils literal"><span class="pre">html_theme</span></code> and <code class="docutils literal"><span class="pre">html_theme_path</span></code></span><a class="headerlink" href="#id15" title="Permalink to this code">¶</a></div>
+<div class="highlight-py literal-block"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>86
+87
+88</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># html_theme = &#39;basic&#39;</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;app&#39;</span>
+<span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_themes&#39;</span><span class="p">]</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 text-center">
+<div class="figure" id="id16">
+<a class="reference external image-reference" href="_images/sphinx-custom-app-theme.jpg"><img alt="Bootstrap styled sphinx theme" class="img-thumbnail" src="_images/sphinx-custom-app-theme.jpg" /></a>
+<p class="caption"><span class="caption-text">You should see a bare sphinx theme.</span></p>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="update-layout-blocks">
+<h2>Update layout blocks<a class="headerlink" href="#update-layout-blocks" title="Permalink to this headline">¶</a></h2>
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+<div class="literal-block-wrapper" id="id17">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal"><span class="pre">layout.html</span></code> Contain the sidebar in a column <code class="docutils literal"><span class="pre">col-xs-12</span> <span class="pre">col-md-3</span></code>.</span><a class="headerlink" href="#id17" title="Permalink to this code">¶</a></div>
+<div class="highlight-html+jinja literal-block"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>50
+51
+52
+53
+54
+55
+56</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span>- <span class="k">macro</span> <span class="nv">sidebar</span><span class="o">()</span> <span class="cp">%}</span>
+<span class="cp">{%</span>- <span class="k">if</span> <span class="nv">render_sidebar</span> <span class="cp">%}</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;sphinxsidebar col-xs-12 col-md-3&quot;</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;navigation&quot;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&quot;main navigation&quot;</span><span class="p">&gt;</span>
+    <span class="c">{# ... #}</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span>
+<span class="cp">{%</span>- <span class="k">endmacro</span> <span class="cp">%}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="literal-block-wrapper" id="id18">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal"><span class="pre">layout.html</span></code> Contain our main content in a <code class="docutils literal"><span class="pre">container</span></code>, <code class="docutils literal"><span class="pre">row</span></code> &amp; <code class="docutils literal"><span class="pre">column</span></code></span><a class="headerlink" href="#id18" title="Permalink to this code">¶</a></div>
+<div class="highlight-html+jinja literal-block"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span>- <span class="k">block</span> <span class="nv">content</span> <span class="cp">%}</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">row&quot;</span><span class="p">&gt;</span>
+        <span class="cp">{%</span>- <span class="k">block</span> <span class="nv">document</span> <span class="cp">%}</span>
+            <span class="cp">{%</span>- <span class="k">set</span> <span class="nv">cls</span> <span class="o">=</span> <span class="s1">&#39;col-xs-12&#39;</span> -<span class="cp">%}</span>
+            <span class="cp">{%</span>- <span class="k">if</span> <span class="nv">render_sidebar</span> -<span class="cp">%}</span>
+                <span class="cp">{%</span> <span class="k">set</span> <span class="nv">cls</span> <span class="o">=</span> <span class="s1">&#39;col-xs-12 col-md-9&#39;</span> <span class="cp">%}</span>
+            <span class="cp">{%</span>- <span class="k">endif</span> <span class="cp">%}</span>
+
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">cls</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;document&quot;</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;main&quot;</span><span class="p">&gt;</span>
+                    <span class="cp">{%</span> <span class="k">block</span> <span class="nv">body</span> <span class="cp">%}{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="cp">{%</span>- <span class="k">endblock</span> <span class="cp">%}</span>
+
+        <span class="cp">{%</span>- <span class="k">block</span> <span class="nv">sidebar1</span> <span class="cp">%}{{</span> <span class="nv">sidebar</span><span class="o">()</span> <span class="cp">}}{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="cp">{%</span>- <span class="k">endblock</span> <span class="cp">%}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="literal-block-wrapper" id="id19">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal"><span class="pre">layout.html</span></code> Contain the wild <code class="docutils literal"><span class="pre">footer</span></code> with <code class="docutils literal"><span class="pre">container</span> <span class="pre">well</span> <span class="pre">well-sm</span></code></span><a class="headerlink" href="#id19" title="Permalink to this code">¶</a></div>
+<div class="highlight-html+jinja literal-block"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>203
+204
+205
+206
+207</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span>- <span class="k">block</span> <span class="nv">footer</span> <span class="cp">%}</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;footer container well well-sm&quot;</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;contentinfo&quot;</span><span class="p">&gt;</span>
+    <span class="c">{# ... #}</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="cp">{%</span>- <span class="k">endblock</span> <span class="cp">%}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="literal-block-wrapper" id="id20">
+<div class="code-block-caption"><span class="caption-text">Remove the related bars</span><a class="headerlink" href="#id20" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash literal-block"><div class="highlight"><pre><span></span><span class="c1"># Remove all related blocks</span>
+sed -i <span class="s1">&#39;/{%- block relbar. %}{{ relbar() }}{% endblock %}/d&#39;</span> _themes/app/layout.html
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 text-center">
+<div class="figure" id="id21">
+<a class="reference external image-reference" href="_images/sphinx-layout-row-col.jpg"><img alt="Bootstrap styled sphinx theme" class="img-thumbnail" src="_images/sphinx-layout-row-col.jpg" /></a>
+<p class="caption"><span class="caption-text">The layout is now using rows and columns.</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="add-some-demo-content">
+<div class="page-header"><h1>Add some demo content<a class="headerlink" href="#add-some-demo-content" title="Permalink to this headline">¶</a></h1>
+</div><div class="highlight-bash literal-block"><div class="highlight"><pre><span></span>wget -O index.rst https://gist.githubusercontent.com/lakhman/bc9b77c616fae791fa84da70461b9059/raw/fd915b34840743c713f1461260061388fea3281c/index.rst
+wget -O test-document.rst https://gist.githubusercontent.com/lakhman/bc9b77c616fae791fa84da70461b9059/raw/fd915b34840743c713f1461260061388fea3281c/test-document.rst
+</pre></div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+<div class="literal-block-wrapper" id="id22">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal"><span class="pre">index.rst</span></code> - Add some demo content to get started</span><a class="headerlink" href="#id22" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="gh">==========================================</span>
+<span class="gh">Welcome to sphinx-project&#39;s documentation!</span>
+<span class="gh">==========================================</span>
+
+<span class="cp">.. Show the local page contents within the document</span>
+<span class="cp">.. http://docutils.sourceforge.net/0.4/docs/ref/rst/directives.html#table-of-contents</span>
+
+<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
+    <span class="nc">:local:</span>
+
+________________________________________________________________________________
+
+<span class="cp">.. Add a toctree to reference other documents</span>
+<span class="cp">.. http://www.sphinx-doc.org/en/stable/markup/toctree.html</span>
+
+<span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+    <span class="nc">:maxdepth:</span> <span class="nf">2</span>
+    <span class="nc">:caption:</span> <span class="nf">Table of Contents:</span>
+
+    /test-document
+
+<span class="gh">----------------</span>
+<span class="gh">Congratulations!</span>
+<span class="gh">----------------</span>
+
+<span class="p">..</span> <span class="ow">alert-success</span><span class="p">::</span> <span class="gs">**Congratulations!**</span>
+
+    You&#39;ve setup a basic sphinx project with restructuredBootstrap and restructuredWeb!
+
+________________________________________________________________________________
+
+<span class="gh">-----------</span>
+<span class="gh">Example Row</span>
+<span class="gh">-----------</span>
+
+<span class="p">..</span> <span class="ow">row</span><span class="p">::</span>
+
+<span class="p">  ..</span> <span class="ow">column</span><span class="p">::</span> 12,6
+
+    An example of using rows and columns to embed a ted talk.
+
+      Physics is like sex: sure, it may give some practical results, but that&#39;s not why we do it.
+
+<span class="p">    ..</span> <span class="ow">hr</span><span class="p">::</span>
+
+<span class="p">    ..</span> <span class="ow">button-primary</span><span class="p">::</span> <span class="na">:fa:</span><span class="nv">`file-video-o fw`</span>  View the talk
+      <span class="nc">:class:</span> <span class="nf">large block</span>
+      <span class="nc">:doc:</span> <span class="nf">test-document</span>
+
+<span class="p">  ..</span> <span class="ow">column</span><span class="p">::</span> 12,6
+
+<span class="p">    ..</span> <span class="ow">ted</span><span class="p">::</span> https://www.ted.com/talks/richard_feynman
+
+
+________________________________________________________________________________
+
+
+<span class="gh">==================</span>
+<span class="gh">Indices and tables</span>
+<span class="gh">==================</span>
+
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`genindex`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`modindex`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`search`</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 text-center">
+<div class="figure" id="id23">
+<a class="reference external image-reference" href="_images/sphinx-demo-content.jpg"><img alt="Bootstrap styled sphinx theme" class="img-thumbnail" src="_images/sphinx-demo-content.jpg" /></a>
+<p class="caption"><span class="caption-text"><code class="docutils literal"><span class="pre">index.rst</span></code></span></p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+<div class="literal-block-wrapper" id="id24">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal"><span class="pre">test-document.rst</span></code> - Add another test page to link to</span><a class="headerlink" href="#id24" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="gh">=============</span>
+<span class="gh">Test Document</span>
+<span class="gh">=============</span>
+
+A document linked to from <span class="s">``index.rst``</span>.
+
+<span class="gh">-----------</span>
+<span class="gh">Example Row</span>
+<span class="gh">-----------</span>
+
+<span class="p">..</span> <span class="ow">row</span><span class="p">::</span>
+
+<span class="p">  ..</span> <span class="ow">column</span><span class="p">::</span> 12,6
+
+<span class="p">    ..</span> <span class="ow">alert-info</span><span class="p">::</span> <span class="gs">**Hello world!**</span> Here&#39;s a great deep learning course.
+
+        &quot;Hello world!&quot;
+
+<span class="p">  ..</span> <span class="ow">column</span><span class="p">::</span> 12,6
+
+<span class="p">    ..</span> <span class="ow">youtube</span><span class="p">::</span> vOppzHpvTiQ
+
+________________________________________________________________________________
+
+<span class="gh">------------</span>
+<span class="gh">Example Tabs</span>
+<span class="gh">------------</span>
+
+<span class="p">..</span> <span class="ow">tabs</span><span class="p">::</span>
+    <span class="nc">:name:</span> <span class="nf">demo-tabs-1</span>
+
+<span class="p">    ..</span> <span class="ow">tab</span><span class="p">::</span> <span class="na">:fa:</span><span class="nv">`book fw`</span>  Tab #1
+
+<span class="p">        ..</span> <span class="ow">alert-success</span><span class="p">::</span> Content for tab #1.
+
+<span class="p">    ..</span> <span class="ow">tab</span><span class="p">::</span> <span class="na">:fa:</span><span class="nv">`user-o fw`</span>  Tab #2
+
+<span class="p">        ..</span> <span class="ow">alert-info</span><span class="p">::</span> Content for tab #2.
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="literal-block-wrapper" id="id25">
+<div class="code-block-caption"><span class="caption-text">Build it</span><a class="headerlink" href="#id25" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash literal-block"><div class="highlight"><pre><span></span>make html
+open _build/html/index.html
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 text-center">
+<div class="figure" id="id26">
+<a class="reference external image-reference" href="_images/sphinx-demo-content-2.jpg"><img alt="Bootstrap styled sphinx theme" class="img-thumbnail" src="_images/sphinx-demo-content-2.jpg" /></a>
+<p class="caption"><span class="caption-text"><code class="docutils literal"><span class="pre">test-document.rst</span></code></span></p>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="setup-webpack">
+<div class="page-header"><h1>Setup Webpack<a class="headerlink" href="#setup-webpack" title="Permalink to this headline">¶</a></h1>
+</div><p>Setup webpack to manage our dependencies and parse our LESS.</p>
+<ul>
+<li><a class="reference external" href="https://webpack.github.io/docs/tutorials/getting-started/">https://webpack.github.io/docs/tutorials/getting-started/</a></li>
+</ul>
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+<div class="literal-block-wrapper" id="id27">
+<div class="code-block-caption"><span class="caption-text">Install webpack and dependencies for less compilation</span><a class="headerlink" href="#id27" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash literal-block"><div class="highlight"><pre><span></span>npm init -f
+
+<span class="c1"># Webpack</span>
+npm install --save-dev webpack webpack-dev-server less <span class="se">\</span>
+css-loader file-loader less-loader style-loader url-loader <span class="se">\</span>
+extract-text-webpack-plugin <span class="se">\</span>
+filemanager-webpack-plugin
+
+<span class="c1"># Bootstrap CSS and fastclick JS</span>
+npm install --save bootstrap fastclick
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper" id="id28">
+<div class="code-block-caption"><span class="caption-text">Create our webpack <code class="docutils literal"><span class="pre">less</span></code>, <code class="docutils literal"><span class="pre">config</span></code> and <code class="docutils literal"><span class="pre">entry</span></code> files.</span><a class="headerlink" href="#id28" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash literal-block"><div class="highlight"><pre><span></span>mkdir -p _themes/app/webpack/
+touch _themes/app/webpack/webpack.entry.js
+touch _themes/app/webpack/app.less
+touch webpack.config.js
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper" id="id29">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal"><span class="pre">conf.py</span></code> - Update your <code class="docutils literal"><span class="pre">html_context</span></code> <code class="docutils literal"><span class="pre">css_files</span></code> and <code class="docutils literal"><span class="pre">script_files</span></code></span><a class="headerlink" href="#id29" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash literal-block"><div class="highlight"><pre><span></span><span class="nv">html_context</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="s1">&#39;css_files&#39;</span>: <span class="o">[</span>
+        <span class="c1"># ...</span>
+        <span class="s1">&#39;_static/app.compiled.css&#39;</span>,
+    <span class="o">]</span>,
+    <span class="s1">&#39;script_files&#39;</span>: <span class="o">[</span>
+        <span class="c1"># ...</span>
+        <span class="s1">&#39;_static/webpack_entry.bundle.js&#39;</span>
+    <span class="o">]</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper" id="id30">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal"><span class="pre">webpack.config.js</span></code> - Create our webpack configuration.</span><a class="headerlink" href="#id30" title="Permalink to this code">¶</a></div>
+<div class="highlight-javascript literal-block"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">webpack</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpack&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">ExtractTextPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;extract-text-webpack-plugin&quot;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">FileManagerPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;filemanager-webpack-plugin&#39;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">extractLess</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ExtractTextPlugin</span><span class="p">({</span>
+    <span class="nx">filename</span><span class="o">:</span> <span class="s2">&quot;./_themes/app/static/app.compiled.css&quot;</span><span class="p">,</span>
+    <span class="nx">disable</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NODE_ENV</span> <span class="o">===</span> <span class="s2">&quot;production&quot;</span>
+<span class="p">});</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">entry</span><span class="o">:</span> <span class="s2">&quot;./_themes/app/webpack/webpack.entry.js&quot;</span><span class="p">,</span>
+    <span class="nx">devtool</span><span class="o">:</span> <span class="s1">&#39;#inline-source-map&#39;</span><span class="p">,</span>
+    <span class="nx">output</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">path</span><span class="o">:</span> <span class="nx">__dirname</span><span class="p">,</span>
+        <span class="nx">filename</span><span class="o">:</span> <span class="s2">&quot;./_themes/app/static/webpack.entry.bundle.js&quot;</span>
+    <span class="p">},</span>
+    <span class="nx">module</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">loaders</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span> <span class="nx">test</span><span class="o">:</span> <span class="sr">/.css$/</span><span class="p">,</span> <span class="nx">loader</span><span class="o">:</span> <span class="s2">&quot;style-loader!css-loader&quot;</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="nx">test</span><span class="o">:</span> <span class="sr">/\.(png|jpg)$/</span><span class="p">,</span> <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;url-loader&#39;</span><span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nx">rules</span><span class="o">:</span> <span class="p">[{</span>
+            <span class="nx">test</span><span class="o">:</span> <span class="sr">/\.less$/</span><span class="p">,</span>
+            <span class="nx">use</span><span class="o">:</span> <span class="nx">extractLess</span><span class="p">.</span><span class="nx">extract</span><span class="p">({</span>
+                <span class="nx">use</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span> <span class="nx">loader</span><span class="o">:</span> <span class="s2">&quot;css-loader&quot;</span><span class="p">,</span> <span class="nx">options</span><span class="o">:</span> <span class="p">{</span> <span class="nx">minimize</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">sourceMap</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}},</span>
+                    <span class="p">{</span> <span class="nx">loader</span><span class="o">:</span> <span class="s2">&quot;less-loader&quot;</span><span class="p">,</span> <span class="nx">options</span><span class="o">:</span> <span class="p">{</span> <span class="nx">sourceMap</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}}</span>
+                <span class="p">],</span>
+                <span class="c1">// use style-loader in development</span>
+                <span class="nx">fallback</span><span class="o">:</span> <span class="s2">&quot;style-loader&quot;</span>
+            <span class="p">})</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nx">test</span><span class="o">:</span> <span class="sr">/\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/</span><span class="p">,</span>
+            <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;url-loader&#39;</span>
+        <span class="p">}]</span>
+    <span class="p">},</span>
+    <span class="nx">plugins</span><span class="o">:</span> <span class="p">[</span>
+        <span class="nx">extractLess</span><span class="p">,</span>
+
+        <span class="c1">// Example: Provide underscore</span>
+        <span class="c1">// new webpack.ProvidePlugin({ _: &quot;./../../static/libs/underscore&quot; }),</span>
+
+        <span class="c1">// Add source-maps with &quot;devtool: &#39;#inline-source-map&#39;&quot;</span>
+        <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">SourceMapDevToolPlugin</span><span class="p">({</span>
+            <span class="nx">filename</span><span class="o">:</span> <span class="s1">&#39;[file].map&#39;</span><span class="p">,</span>
+            <span class="nx">append</span><span class="o">:</span> <span class="s1">&#39;\n//# sourceMappingURL=/_static/[url]&#39;</span>
+        <span class="p">}),</span>
+
+        <span class="c1">// https://github.com/gregnb/filemanager-webpack-plugin</span>
+        <span class="k">new</span> <span class="nx">FileManagerPlugin</span><span class="p">({</span>
+          <span class="nx">onEnd</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">copy</span><span class="o">:</span> <span class="p">[{</span>
+                <span class="nx">source</span><span class="o">:</span> <span class="s1">&#39;_themes/app/static&#39;</span><span class="p">,</span>
+                <span class="nx">destination</span><span class="o">:</span> <span class="s1">&#39;_build/html/_static&#39;</span>
+            <span class="p">}]</span>
+          <span class="p">}</span>
+        <span class="p">})</span>
+    <span class="p">]</span>
+<span class="p">};</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="literal-block-wrapper" id="id31">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal"><span class="pre">_themes/app/webpack/app.less</span></code> - Create our app less file.</span><a class="headerlink" href="#id31" title="Permalink to this code">¶</a></div>
+<div class="highlight-scss literal-block"><div class="highlight"><pre><span></span><span class="k">@import</span> <span class="s2">&quot;~bootstrap/less/variables&quot;</span><span class="p">;</span>
+
+<span class="nt">h1</span><span class="o">,</span> <span class="nt">h1</span> <span class="nt">a</span><span class="o">,</span> <span class="nt">h2</span> <span class="nt">a</span> <span class="p">{</span>
+  <span class="nt">color</span><span class="nd">:</span> <span class="o">@</span><span class="nt">brand-danger</span><span class="o">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper" id="id32">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal"><span class="pre">_themes/app/webpack/webpack.entry.js</span></code> - Create our entry file.</span><a class="headerlink" href="#id32" title="Permalink to this code">¶</a></div>
+<div class="highlight-javascript literal-block"><div class="highlight"><pre><span></span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;./app.less&quot;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">FastClick</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fastclick&#39;</span><span class="p">);</span>
+<span class="nx">FastClick</span><span class="p">.</span><span class="nx">attach</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+<span class="c1">// $(document).ready(function(){});</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper" id="id33">
+<div class="code-block-caption"><span class="caption-text">Run <code class="docutils literal"><span class="pre">webpack</span></code> to compile our CSS and javascript.</span><a class="headerlink" href="#id33" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash literal-block"><div class="highlight"><pre><span></span>webpack
+
+<span class="c1"># Use --watch to auto-recompile on changes.</span>
+<span class="c1"># webpack --watch</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 text-center">
+<div class="figure" id="id34">
+<a class="reference external image-reference" href="_images/sphinx-webpack.jpg"><img alt="The red coloured headers comes from app.less." class="img-thumbnail" src="_images/sphinx-webpack.jpg" /></a>
+<p class="caption"><span class="caption-text">The green coloured headers comes from <code class="docutils literal"><span class="pre">app.less</span></code>.</span></p>
+</div>
+</div>
+</div>
+<hr />
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last">
+<li><a class="reference external" href="http://www.sphinx-doc.org/en/stable/theming.html">http://www.sphinx-doc.org/en/stable/theming.html</a></li>
+<li><a class="reference external" href="http://www.sphinx-doc.org/en/stable/config.html">http://www.sphinx-doc.org/en/stable/config.html</a></li>
+</ul>
+</div>
+</div>
+
+
+                      </div>
+                  </div>
+              </div>
+        </div>
+    </main>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="footer well" role="contentinfo">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6 text-left">
+                            <a href="https://github.com/lakhman/restructuredBootstrap"><span class="fa fa-github"></span> Star us on Github</a>
+                        </div>
+                        <div class="col-xs-12 col-md-6 text-right">
+                                &#169; Copyright 2017, Anil Lakhman.
+                              Created using <a href="http://sphinx-doc.org/">Sphinx 1.6.3</a>.
+                        </div>
+                    </div>
+                </div>
+                <div class="sizer">
+                    <div class="device-check visible-xs" data-device="xs" data-order="1"></div>
+                    <div class="device-check visible-sm" data-device="sm" data-order="2"></div>
+                    <div class="device-check visible-md" data-device="md" data-order="3"></div>
+                    <div class="device-check visible-lg" data-device="lg" data-order="4"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+  <script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script async defer src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+A text with a `link to open a modal <#modal-demo>`_ which should have the correct attributes.

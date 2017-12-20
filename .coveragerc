@@ -1,0 +1,11 @@
+# coverage run src/bootstrap/tests/generated_suite.py && coverage html
+[run]
+concurrency = multiprocessing
+parallel = True
+omit = */.virtualenvs/*, \
+    /usr/lib/* \
+    /build/*
+data_file = .cache/.coverage
+
+[html]
+directory=.cache/html-coverage

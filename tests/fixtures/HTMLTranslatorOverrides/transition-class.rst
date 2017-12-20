@@ -1,0 +1,3 @@
+________________________________________________________________________________
+
+.. Test transition is plain without docutils classes

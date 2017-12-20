@@ -1,0 +1,3 @@
+.. alert-info::
+
+  **Alert** text

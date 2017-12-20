@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <!-- Used to run html fixtures in browser -->
+        <!-- http://localhost:60002/../fixtures/template.html?html=HTMLTranslator/simple_doc.html -->
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Bootstrap Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <style type="text/css">
+            .headerlink {font-size: 80%; color: #aaa; margin: 0 0 0 5px;}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div id="include-content"></div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            function getUrlVars()
+            {
+                var vars = [], hash;
+                var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+                for(var i = 0; i < hashes.length; i++)
+                {
+                    hash = hashes[i].split('=');
+                    vars.push(hash[0]);
+                    vars[hash[0]] = hash[1];
+                }
+                return vars;
+            }
+
+            $(function() {
+                var html = getUrlVars()["html"];
+                $("#include-content").load(html);
+            });
+        </script>
+    </body>
+</html>

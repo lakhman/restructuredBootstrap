@@ -1,0 +1,3859 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="theme-color" content="#583e7e">
+    <title>Installation - restructuredBootstrap & restructuredWeb</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/app.compiled.css?v=82469" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT: './',
+        VERSION: '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE: false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/webpack.entry.bundle.js?v=99118"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+
+    <style type="text/css">
+    .tab-content {
+      border: 1px solid #ddd;
+      border-top: none;
+      padding: 10px;
+    }
+    </style>
+  </head>
+  <body class="index">
+    <header class="navbar navbar-default navbar-static-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" aria-expanded="false" data-toggle="offcanvas">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><span class="brand-rest">reStructured</span><span class="brand-bs">Bootstrap</span></a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav" role="tablist">
+                <li class="active"><a href="#">reStructured<b>Bootstrap</b></a></li>
+                <li><a href="restructuredWeb.html">reStructured<b>Web</b></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="basic-sphinx-bootstrap-setup.html">Setup & Usage</a></li>
+                <li>
+                    <button type="button" class="navbar-toggle" aria-expanded="false" data-toggle="offcanvas">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </header>
+    <aside class="navbar slideout-menu slideout-menu-left" role="navigation">
+        <ul class="nav navbar-nav">
+<li class="active"><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#admonitions">Admonitions</a></li>
+<li><a class="reference internal" href="#alerts">Alerts</a></li>
+<li><a class="reference internal" href="#buttons">Buttons</a></li>
+<li><a class="reference internal" href="#button-groups">Button Groups</a></li>
+<li><a class="reference internal" href="#button-toolbar">Button Toolbar</a></li>
+<li><a class="reference internal" href="#callout">Callout</a></li>
+<li><a class="reference internal" href="#clearfix">Clearfix</a></li>
+<li><a class="reference internal" href="#collapsible">Collapsible</a></li>
+<li class="dropdown"><a class="dropdown-toggle reference internal" data-target="#container" href="#container">Container <span class="fa fa-fw fa-pull-right fa-caret-down"></span></a><ul class="nav navbar-nav dropdown-menu">
+<li><a class="reference internal" href="#jumbotron">Jumbotron</a></li>
+<li><a class="reference internal" href="#well">Well</a></li>
+<li><a class="reference internal" href="#page-header">Page Header</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#definition-list">Definition list</a></li>
+<li class="dropdown"><a class="dropdown-toggle reference internal" data-target="#grid" href="#grid">Grid <span class="fa fa-fw fa-pull-right fa-caret-down"></span></a><ul class="nav navbar-nav dropdown-menu">
+<li><a class="reference internal" href="#columns">Columns</a></li>
+<li><a class="reference internal" href="#push-pull">Push &amp; Pull</a></li>
+<li><a class="reference internal" href="#offset">Offset</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#images">Images</a></li>
+<li><a class="reference internal" href="#lead-paragraph">Lead Paragraph</a></li>
+<li><a class="reference internal" href="#line-rule">Line Rule</a></li>
+<li class="dropdown"><a class="dropdown-toggle reference internal" data-target="#lists" href="#lists">Lists <span class="fa fa-fw fa-pull-right fa-caret-down"></span></a><ul class="nav navbar-nav dropdown-menu">
+<li><a class="reference internal" href="#basic-list-group">Basic List Group</a></li>
+<li><a class="reference internal" href="#linked-items">Linked Items</a></li>
+<li><a class="reference internal" href="#contextual-items">Contextual Items</a></li>
+<li><a class="reference internal" href="#custom-content">Custom Content</a></li>
+</ul>
+</li>
+<li class="dropdown"><a class="dropdown-toggle reference internal" data-target="#media-object" href="#media-object">Media Object <span class="fa fa-fw fa-pull-right fa-caret-down"></span></a><ul class="nav navbar-nav dropdown-menu">
+<li><a class="reference internal" href="#alignment">Alignment</a></li>
+<li><a class="reference internal" href="#media-icons">Media Icons</a></li>
+<li><a class="reference internal" href="#nested-lists">Nested Lists</a></li>
+</ul>
+</li>
+<li class="dropdown"><a class="dropdown-toggle reference internal" data-target="#modal" href="#modal">Modal <span class="fa fa-fw fa-pull-right fa-caret-down"></span></a><ul class="nav navbar-nav dropdown-menu">
+<li><a class="reference internal" href="#id1">Modal</a></li>
+</ul>
+</li>
+<li class="dropdown"><a class="dropdown-toggle reference internal" data-target="#panel" href="#panel">Panel <span class="fa fa-fw fa-pull-right fa-caret-down"></span></a><ul class="nav navbar-nav dropdown-menu">
+<li><a class="reference internal" href="#panel-simple">Panel Simple</a></li>
+<li><a class="reference internal" href="#panel-heading">Panel Heading</a></li>
+<li><a class="reference internal" href="#panel-footer">Panel Footer</a></li>
+<li><a class="reference internal" href="#panel-list">Panel List</a></li>
+<li><a class="reference internal" href="#panel-table">Panel Table</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#progress-bar">Progress Bar</a></li>
+<li><a class="reference internal" href="#tables">Tables</a></li>
+<li><a class="reference internal" href="#tabs">Tabs</a></li>
+<li><a class="reference internal" href="#badge-labels">Badge &amp; Labels</a></li>
+<li><a class="reference internal" href="#inline-backgrounds">Inline Backgrounds</a></li>
+<li><a class="reference internal" href="#font-awesome">Font Awesome</a></li>
+<li><a class="reference internal" href="#inline-heading">Inline Heading</a></li>
+<li><a class="reference internal" href="#text-helpers">Text Helpers</a></li>
+<li><a class="reference internal" href="#tooltips">Tooltips</a></li>
+</ul>
+
+    </aside>
+
+    <main class="slideout-panel slideout-panel-left">
+        <div id="main-content" class="container-fluid">
+              <div class="row">
+                  <div class="col-xs-12" role="main">
+                      <div>
+                          
+  <div class="section" id="installation">
+<div class="page-header"><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+</div><div class="literal-block-wrapper" id="id2">
+<div class="code-block-caption"><span class="caption-text"><span class="fa fa-code fa-fw"></span>Install the extension</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash literal-block"><div class="highlight"><pre><span></span>pip install restructuredBootstrap
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper" id="id3">
+<div class="code-block-caption"><span class="caption-text"><span class="fa fa-code fa-fw"></span>Update sphinx-project/conf.py</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-python literal-block"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># Import all components</span>
+    <span class="s1">&#39;restructuredBootstrap&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<a href="basic-sphinx-bootstrap-setup.html" class="btn btn-success" role="button"><span class="fa fa-cog fa-fw"></span> View sphinx setup</a>
+</div>
+<hr />
+<div class="section" id="admonitions">
+<div class="page-header"><h1>Admonitions<a class="headerlink" href="#admonitions" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item"><span class="fa fa-info-circle fa-fw text-muted"></span> Provided by docutils by default, style as required</li>
+<li class="list-group-item"><span class="fa fa-link fa-fw text-muted"></span> <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html#admonitions">http://docutils.sourceforge.net/docs/ref/rst/directives.html#admonitions</a></li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id4">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">attention</span><span class="p">::</span> <span class="c">&lt;Content&gt;</span>
+
+<span class="c">  &lt;Content&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">attention</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">caution</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">danger</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="admonition danger">
+<p class="first admonition-title">Danger</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">error</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="admonition error">
+<p class="first admonition-title">Error</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">hint</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">important</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">seealso</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">tip</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">warning</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+  Maecenas non mi et nibh rutrum auctor.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<p class="last">Maecenas non mi et nibh rutrum auctor.</p>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="alerts">
+<div class="page-header"><h1>Alerts<a class="headerlink" href="#alerts" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item"><span class="fa fa-link fa-fw text-muted"></span> <a class="reference external" href="https://getbootstrap.com/docs/3.3/components/#alerts">https://getbootstrap.com/docs/3.3/components/#alerts</a></li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id5">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">alert</span><span class="p">::</span> <span class="c">&lt;Content&gt;</span>
+  <span class="nc">:class:</span> <span class="c">&lt;Class&gt;</span>
+  <span class="nc">:dismissible:</span>
+
+<span class="c">  &lt;Content&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">alert-success</span><span class="p">::</span> <span class="gs">**Success!**</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  <span class="nc">:dismissible:</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="alert alert-success alert-dismissible" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-hidden="true" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<strong>Success!</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">alert-info</span><span class="p">::</span> <span class="gs">**Info!**</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="alert alert-info" role="alert">
+<strong>Info!</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">alert-warning</span><span class="p">::</span> <span class="gs">**Warning!**</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="alert alert-warning" role="alert">
+<strong>Warning!</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">alert-danger</span><span class="p">::</span> <span class="gs">**Danger!**</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="alert alert-danger" role="alert">
+<strong>Danger!</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">alert-info</span><span class="p">::</span> <span class="na">:fa:</span><span class="nv">`info-circle fw`</span>  <span class="gs">**Links**</span> are automatically applied a <span class="s">``.alert-link``</span> class.
+
+  → <span class="s">`View the Bootstrap docs`_</span>
+
+<span class="p">  ..</span> <span class="nt">_view the Bootstrap docs:</span> https://getbootstrap.com/docs/3.3/components/#alerts
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="alert alert-info" role="alert">
+<p class="first"><span class="fa fa-info-circle fa-fw"></span> <strong>Links</strong> are automatically applied a <code class="docutils literal"><span class="pre">.alert-link</span></code> class.</p>
+<p>→ <a class="alert-link reference external" href="https://getbootstrap.com/docs/3.3/components/#alerts">View the Bootstrap docs</a></p>
+
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="buttons">
+<div class="page-header"><h1>Buttons<a class="headerlink" href="#buttons" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item"><span class="fa fa-info-circle fa-fw text-muted"></span> Button’s with a <code class="docutils literal"><span class="pre">href</span></code> will be rendered as an anchor element <code class="docutils literal"><span class="pre">&lt;a</span> <span class="pre">href=&quot;...&quot;&gt;</span></code></li>
+<li class="list-group-item"><span class="fa fa-info-circle fa-fw text-muted"></span> Buttons without a <code class="docutils literal"><span class="pre">href</span></code> will be rendered as a <code class="docutils literal"><span class="pre">&lt;button/&gt;</span></code> element</li>
+<li class="list-group-item"><span class="fa fa-info-circle fa-fw text-muted"></span> Classes <code class="docutils literal"><span class="pre">xs,sm,lg</span></code> are automatically expanded</li>
+<li class="list-group-item"><span class="fa fa-link fa-fw text-muted"></span> <a class="reference external" href="https://getbootstrap.com/docs/3.3/css/#buttons">https://getbootstrap.com/docs/3.3/css/#buttons</a></li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id6">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">button</span><span class="p">::</span> <span class="c">&lt;ButtonText&gt;</span>
+  <span class="nc">:class:</span> <span class="c">&lt;Class&gt; [xs,sm,lg]</span>
+  <span class="nc">:href:</span> <span class="c">&lt;URI | &quot;#&quot; | &quot;void&quot;&gt;</span>
+  <span class="nc">:doc:</span> <span class="c">&lt;DocName&gt;</span>
+  <span class="nc">:target:</span> <span class="c">_blank</span>
+  <span class="nc">:collapse:</span> <span class="c">&lt;HTML ID of container to collapse&gt;</span>
+  <span class="nc">:name:</span> <span class="c">&lt;HTML ID of this button&gt;</span>
+  <span class="nc">:onclick:</span> <span class="c">&lt;Javascript&gt;</span>
+  <span class="nc">:onmouseover:</span> <span class="c">&lt;Javascript&gt;</span>
+  <span class="nc">:onmouseout:</span> <span class="c">&lt;Javascript&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">button</span><span class="p">::</span> <span class="na">:fa:</span><span class="nv">`cog fw`</span>  View the advanced usage
+  <span class="nc">:class:</span> <span class="nf">large block</span>
+<span class="hll">  <span class="nc">:doc:</span> <span class="nf">advanced-usage-sphinx</span>
+</span>  <span class="nc">:target:</span> <span class="nf">_blank</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<a href="advanced-usage-sphinx.html" class="btn btn-default btn-block large" role="button" target="_blank"><span class="fa fa-cog fa-fw"></span> View the advanced usage</a>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id7">
+<div class="code-block-caption"><span class="caption-text">Default button</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">button</span><span class="p">::</span> Default
+<span class="p">..</span> <span class="ow">button-primary</span><span class="p">::</span> Primary
+<span class="p">..</span> <span class="ow">button-success</span><span class="p">::</span> Success
+<span class="p">..</span> <span class="ow">button-info</span><span class="p">::</span> Info
+<span class="p">..</span> <span class="ow">button-warning</span><span class="p">::</span> Warning
+<span class="p">..</span> <span class="ow">button-danger</span><span class="p">::</span> Danger
+<span class="p">..</span> <span class="ow">button-link</span><span class="p">::</span> Link
+<span class="p">..</span> <span class="ow">button-plain</span><span class="p">::</span> Plain
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<button class="btn btn-default" type="button">Default</button>
+<button class="btn btn-primary" type="button">Primary</button>
+<button class="btn btn-success" type="button">Success</button>
+<button class="btn btn-info" type="button">Info</button>
+<button class="btn btn-warning" type="button">Warning</button>
+<button class="btn btn-danger" type="button">Danger</button>
+<button class="btn btn-link" type="button">Link</button>
+<button type="button">Plain</button>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id8">
+<div class="code-block-caption"><span class="caption-text">XS Size</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">button-xs</span><span class="p">::</span> Default
+<span class="p">..</span> <span class="ow">button-xs-primary</span><span class="p">::</span> Primary
+<span class="p">..</span> <span class="ow">button-xs-success</span><span class="p">::</span> Success
+<span class="p">..</span> <span class="ow">button-xs-info</span><span class="p">::</span> Info
+<span class="p">..</span> <span class="ow">button-xs-warning</span><span class="p">::</span> Warning
+<span class="p">..</span> <span class="ow">button-xs-danger</span><span class="p">::</span> Danger
+<span class="p">..</span> <span class="ow">button-xs-link</span><span class="p">::</span> Link
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<button class="btn btn-default btn-xs" type="button">Default</button>
+<button class="btn btn-primary btn-xs" type="button">Primary</button>
+<button class="btn btn-success btn-xs" type="button">Success</button>
+<button class="btn btn-info btn-xs" type="button">Info</button>
+<button class="btn btn-warning btn-xs" type="button">Warning</button>
+<button class="btn btn-danger btn-xs" type="button">Danger</button>
+<button class="btn btn-link btn-xs" type="button">Link</button>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id9">
+<div class="code-block-caption"><span class="caption-text">SM Size</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">button-sm</span><span class="p">::</span> Default
+<span class="p">..</span> <span class="ow">button-sm-primary</span><span class="p">::</span> Primary
+<span class="p">..</span> <span class="ow">button-sm-success</span><span class="p">::</span> Success
+<span class="p">..</span> <span class="ow">button-sm-info</span><span class="p">::</span> Info
+<span class="p">..</span> <span class="ow">button-sm-warning</span><span class="p">::</span> Warning
+<span class="p">..</span> <span class="ow">button-sm-danger</span><span class="p">::</span> Danger
+<span class="p">..</span> <span class="ow">button-sm-link</span><span class="p">::</span> Link
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<button class="btn btn-default btn-sm" type="button">Default</button>
+<button class="btn btn-primary btn-sm" type="button">Primary</button>
+<button class="btn btn-success btn-sm" type="button">Success</button>
+<button class="btn btn-info btn-sm" type="button">Info</button>
+<button class="btn btn-warning btn-sm" type="button">Warning</button>
+<button class="btn btn-danger btn-sm" type="button">Danger</button>
+<button class="btn btn-link btn-sm" type="button">Link</button>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id10">
+<div class="code-block-caption"><span class="caption-text">LG Size</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">button-lg</span><span class="p">::</span> Default
+<span class="p">..</span> <span class="ow">button-lg-primary</span><span class="p">::</span> Primary
+<span class="p">..</span> <span class="ow">button-lg-success</span><span class="p">::</span> Success
+<span class="p">..</span> <span class="ow">button-lg-info</span><span class="p">::</span> Info
+<span class="p">..</span> <span class="ow">button-lg-warning</span><span class="p">::</span> Warning
+<span class="p">..</span> <span class="ow">button-lg-danger</span><span class="p">::</span> Danger
+<span class="p">..</span> <span class="ow">button-lg-link</span><span class="p">::</span> Link
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<button class="btn btn-default btn-lg" type="button">Default</button>
+<button class="btn btn-primary btn-lg" type="button">Primary</button>
+<button class="btn btn-success btn-lg" type="button">Success</button>
+<button class="btn btn-info btn-lg" type="button">Info</button>
+<button class="btn btn-warning btn-lg" type="button">Warning</button>
+<button class="btn btn-danger btn-lg" type="button">Danger</button>
+<button class="btn btn-link btn-lg" type="button">Link</button>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id11">
+<div class="code-block-caption"><span class="caption-text">Events, e.g: for analytics tracking</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">button-link</span><span class="p">::</span> Mouse Over / Mouse Out / Click me
+  <span class="nc">:onclick:</span> <span class="nf">$(&#39;#btn-event-test&#39;).css(&#39;backgroundColor&#39;, &#39;#5cb85c&#39;).text(&#39;Clicked&#39;)</span>
+  <span class="nc">:onmouseover:</span> <span class="nf">$(&#39;#btn-event-test&#39;).css(&#39;backgroundColor&#39;, &#39;#d9534f&#39;).text(&#39;Mouse Over&#39;)</span>
+  <span class="nc">:onmouseout:</span> <span class="nf">$(&#39;#btn-event-test&#39;).css(&#39;backgroundColor&#39;, &#39;#f0ad4e&#39;).text(&#39;Mouse Out&#39;)</span>
+
+<span class="p">..</span> <span class="ow">container</span><span class="p">::</span> well well-sm
+  <span class="nc">:name:</span> <span class="nf">btn-event-test</span>
+
+  Test well container
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<button class="btn btn-link" onclick="$('#btn-event-test').css('backgroundColor', '#5cb85c').text('Clicked')" onmouseover="$('#btn-event-test').css('backgroundColor', '#d9534f').text('Mouse Over')" onmouseout="$('#btn-event-test').css('backgroundColor', '#f0ad4e').text('Mouse Out')" type="button">Mouse Over / Mouse Out / Click me</button>
+<div class="well well-sm" id="btn-event-test">
+Test well container
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="button-groups">
+<div class="page-header"><h1>Button Groups<a class="headerlink" href="#button-groups" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item"><span class="fa fa-info-circle fa-fw text-muted"></span> Use the <code class="docutils literal"><span class="pre">vertical</span></code> flag to indicate a vertical group</li>
+<li class="list-group-item"><span class="fa fa-info-circle fa-fw text-muted"></span> Add <code class="docutils literal"><span class="pre">xs,sm,lg</span></code> classes to <code class="docutils literal"><span class="pre">..button-group::</span></code> to indicate the sizing of all buttons nested within it</li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id12">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id12" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">button-group</span><span class="p">::</span> <span class="c">&lt;Class&gt; [xs,sm,md,lg,justified]</span>
+  <span class="nc">:vertical:</span>
+
+<span class="c">  &lt;Button&gt;</span>
+<span class="c">  &lt;Button&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id13">
+<div class="code-block-caption"><span class="caption-text">Add <code class="docutils literal"><span class="pre">xs,sm,lg</span></code> classes to <code class="docutils literal"><span class="pre">..</span> <span class="pre">button-group::</span></code> to size all the buttons nested within it</span><a class="headerlink" href="#id13" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="hll"><span class="p">..</span> <span class="ow">button-group</span><span class="p">::</span> xs justified
+</span>
+<span class="p">  ..</span> <span class="ow">button-primary</span><span class="p">::</span> <span class="na">:fa:</span><span class="nv">`link`</span>  Horizontal Link 1
+    <span class="nc">:href:</span> <span class="nf">https://google.com</span>
+    <span class="nc">:target:</span> <span class="nf">_blank</span>
+
+<span class="p">  ..</span> <span class="ow">button-group</span><span class="p">::</span> xs
+
+<span class="p">    ..</span> <span class="ow">button-primary</span><span class="p">::</span> <span class="na">:fa:</span><span class="nv">`link`</span>  Horizontal Dropdown Link 2  <span class="na">:fa:</span><span class="nv">`caret-down`</span>
+      <span class="nc">:class:</span> <span class="nf">toggle</span>
+
+    <span class="m">-</span> <span class="s">`Link 1 </span><span class="si">&lt;https://google.com&gt;</span><span class="s">`_</span>
+    <span class="m">-</span> <span class="s">`Link 2 </span><span class="si">&lt;https://facebook.com&gt;</span><span class="s">`_</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="btn-group btn-group-xs btn-group-justified" role="group">
+<a href="https://google.com" class="btn btn-primary" role="button" target="_blank"><span class="fa fa-link"></span> Horizontal Link 1</a>
+<div class="btn-group btn-group-xs" role="group">
+<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" type="button"><span class="fa fa-link"></span> Horizontal Dropdown Link 2 <span class="fa fa-caret-down"></span></button>
+<ul class="dropdown-menu">
+<li><a class="reference external" href="https://google.com">Link 1</a></li>
+<li><a class="reference external" href="https://facebook.com">Link 2</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id14">
+<div class="code-block-caption"><span class="caption-text">Use the <code class="docutils literal"><span class="pre">vertical</span></code> flag to indicate a vertical group</span><a class="headerlink" href="#id14" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">button-group</span><span class="p">::</span> sm
+<span class="hll">  <span class="nc">:vertical:</span>
+</span>
+<span class="p">  ..</span> <span class="ow">button</span><span class="p">::</span> <span class="na">:fa:</span><span class="nv">`link`</span>  Vertical Link 1
+    <span class="nc">:class:</span> <span class="nf">primary</span>
+
+<span class="p">  ..</span> <span class="ow">button</span><span class="p">::</span> <span class="na">:fa:</span><span class="nv">`link`</span>  Vertical Link 2
+    <span class="nc">:class:</span> <span class="nf">primary</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="btn-group-vertical btn-group-sm" role="group">
+<button class="btn btn-default primary" type="button"><span class="fa fa-link"></span> Vertical Link 1</button>
+<button class="btn btn-default primary" type="button"><span class="fa fa-link"></span> Vertical Link 2</button>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="button-toolbar">
+<div class="page-header"><h1>Button Toolbar<a class="headerlink" href="#button-toolbar" title="Permalink to this headline">¶</a></h1>
+</div><div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id15">
+<div class="code-block-caption"><span class="caption-text">Use a toolbar to group multiple buttons</span><a class="headerlink" href="#id15" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">button-toolbar</span><span class="p">::</span>
+
+<span class="p">  ..</span> <span class="ow">button-group</span><span class="p">::</span>
+
+<span class="p">    ..</span> <span class="ow">button-primary</span><span class="p">::</span> Blue
+      <span class="nc">:onmouseover:</span> <span class="nf">$(&#39;#btn-toolbar-demo&#39;).css(&#39;backgroundColor&#39;, &#39;lightblue&#39;);</span>
+
+<span class="p">    ..</span> <span class="ow">button-danger</span><span class="p">::</span> Red
+      <span class="nc">:onmouseover:</span> <span class="nf">$(&#39;#btn-toolbar-demo&#39;).css(&#39;backgroundColor&#39;, &#39;red&#39;);</span>
+
+<span class="p">  ..</span> <span class="ow">button-group</span><span class="p">::</span>
+
+<span class="p">    ..</span> <span class="ow">button-success</span><span class="p">::</span> Green
+      <span class="nc">:onmouseover:</span> <span class="nf">$(&#39;#btn-toolbar-demo&#39;).css(&#39;backgroundColor&#39;, &#39;lightgreen&#39;);</span>
+
+<span class="p">    ..</span> <span class="ow">button-warning</span><span class="p">::</span> Green
+      <span class="nc">:onmouseover:</span> <span class="nf">$(&#39;#btn-toolbar-demo&#39;).css(&#39;backgroundColor&#39;, &#39;yellow&#39;);</span>
+
+<span class="p">    ..</span> <span class="ow">button</span><span class="p">::</span> void()
+      <span class="nc">:onclick:</span> <span class="nf">$(&#39;#btn-toolbar-demo&#39;).css(&#39;backgroundColor&#39;, &#39;#f5f5f5&#39;);</span>
+
+|
+
+<span class="p">..</span> <span class="ow">well-sm</span><span class="p">::</span>
+  <span class="nc">:name:</span> <span class="nf">btn-toolbar-demo</span>
+
+  <span class="na">:h4:</span><span class="nv">`Button toolbar demo`</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="btn-toolbar" role="toolbar">
+<div class="btn-group" role="group">
+<button class="btn btn-primary" onmouseover="$('#btn-toolbar-demo').css('backgroundColor', 'lightblue');" type="button">Blue</button>
+<button class="btn btn-danger" onmouseover="$('#btn-toolbar-demo').css('backgroundColor', 'red');" type="button">Red</button>
+</div>
+<div class="btn-group" role="group">
+<button class="btn btn-success" onmouseover="$('#btn-toolbar-demo').css('backgroundColor', 'lightgreen');" type="button">Green</button>
+<button class="btn btn-warning" onmouseover="$('#btn-toolbar-demo').css('backgroundColor', 'yellow');" type="button">Green</button>
+<button class="btn btn-default" onclick="$('#btn-toolbar-demo').css('backgroundColor', '#f5f5f5');" type="button">void()</button>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="well well-sm" id="btn-toolbar-demo">
+<p class="h4">Button toolbar demo</p>
+
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="callout">
+<div class="page-header"><h1>Callout<a class="headerlink" href="#callout" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item"><span class="fa fa-info-circle fa-fw text-muted"></span> A custom callout similar to <code class="docutils literal"><span class="pre">.bs-callouts</span></code> provided by bootstrap</li>
+</ul>
+<div class="modal fade" id="modal-callout-css" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<p class="h4 modal-title">Custom Callout CSS</p>
+</div>
+<div class="modal-body">
+<p>Place the following CSS into your application. <span class="text-muted"><em>(double click on code blocks to select all the text)</em></span></p>
+<div id="callout-code-block">
+<ul class="nav nav-tabs" role="tablist">
+<li class="active" role="presentation"><a class="reference internal" data-toggle="tab" href="#tab-pane-less" role="tab"><span class="fa fa-code fa-fw"></span> LESS</a></li>
+<li role="presentation"><a class="reference internal" data-toggle="tab" href="#tab-pane-css" role="tab"><span class="fa fa-code fa-fw"></span> CSS</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tab-pane-less" role="tabpanel">
+<div class="highlight-scss literal-block"><div class="highlight"><pre><span></span><span class="cm">/* -- Custom Callout --------------------------------------------------- */</span>
+<span class="cm">/* -- https://cpratt.co/twitter-bootstrap-callout-css-styles/ ---------- */</span>
+
+<span class="nc">.bs-callout</span> <span class="p">{</span>
+    <span class="nt">padding</span><span class="nd">:</span> <span class="nt">20px</span><span class="o">;</span>
+    <span class="nt">margin</span><span class="nd">:</span> <span class="nt">0</span> <span class="nt">0</span> <span class="nt">20px</span> <span class="nt">0</span><span class="o">;</span>
+    <span class="nt">border</span><span class="nd">:</span> <span class="nt">1px</span> <span class="nt">solid</span> <span class="nn">#eee</span><span class="o">;</span>
+    <span class="nt">border-left-width</span><span class="nd">:</span> <span class="nt">5px</span><span class="o">;</span>
+    <span class="nt">border-radius</span><span class="nd">:</span> <span class="nt">3px</span><span class="o">;</span>
+    <span class="nt">background</span><span class="nd">:</span> <span class="nn">#fff</span><span class="o">;</span>
+<span class="p">}</span>
+
+<span class="nc">.bs-callout</span> <span class="p">{</span>
+    <span class="nt">code</span> <span class="p">{</span> <span class="nt">border-radius</span><span class="nd">:</span> <span class="nt">3px</span><span class="o">;</span> <span class="p">}</span>
+
+    <span class="nt">h1</span><span class="o">,</span><span class="nt">h2</span><span class="o">,</span><span class="nt">h3</span><span class="o">,</span><span class="nt">h4</span><span class="o">,</span><span class="nt">h5</span><span class="o">,</span><span class="nt">h6</span><span class="o">,</span><span class="nc">.h4</span> <span class="p">{</span>
+        <span class="nt">margin-top</span><span class="nd">:</span> <span class="nt">0</span><span class="o">;</span>
+        <span class="nt">margin-bottom</span><span class="nd">:</span> <span class="nt">5px</span><span class="o">;</span>
+    <span class="p">}</span>
+
+    <span class="nt">p</span><span class="nd">:last-child</span> <span class="p">{</span> <span class="nt">margin-bottom</span><span class="nd">:</span> <span class="nt">0</span><span class="o">;</span> <span class="p">}</span>
+
+    <span class="k">&amp;</span><span class="o">+</span><span class="nc">.bs-callout</span> <span class="p">{</span> <span class="nt">margin-top</span><span class="nd">:</span> <span class="nt">-5px</span><span class="o">;</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.bs-callout-default</span> <span class="p">{</span> <span class="nt">border-left-color</span><span class="nd">:</span> <span class="nn">#777</span><span class="o">;</span> <span class="p">}</span>
+<span class="nc">.bs-callout-default</span> <span class="p">{</span>
+    <span class="nt">h1</span><span class="o">,</span><span class="nt">h2</span><span class="o">,</span><span class="nt">h3</span><span class="o">,</span><span class="nt">h4</span><span class="o">,</span><span class="nt">h5</span><span class="o">,</span><span class="nt">h6</span><span class="o">,</span><span class="nc">.h4</span> <span class="p">{</span>
+        <span class="nt">color</span><span class="nd">:</span> <span class="nn">#777</span><span class="o">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.bs-callout-primary</span> <span class="p">{</span> <span class="nt">border-left-color</span><span class="nd">:</span> <span class="nn">#428bca</span><span class="o">;</span> <span class="p">}</span>
+<span class="nc">.bs-callout-primary</span> <span class="p">{</span>
+    <span class="nt">h1</span><span class="o">,</span><span class="nt">h2</span><span class="o">,</span><span class="nt">h3</span><span class="o">,</span><span class="nt">h4</span><span class="o">,</span><span class="nt">h5</span><span class="o">,</span><span class="nt">h6</span><span class="o">,</span><span class="nc">.h4</span> <span class="p">{</span>
+        <span class="nt">color</span><span class="nd">:</span> <span class="nn">#428bca</span><span class="o">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.bs-callout-success</span> <span class="p">{</span> <span class="nt">border-left-color</span><span class="nd">:</span> <span class="nn">#5cb85c</span><span class="o">;</span> <span class="p">}</span>
+<span class="nc">.bs-callout-success</span> <span class="p">{</span>
+    <span class="nt">h1</span><span class="o">,</span><span class="nt">h2</span><span class="o">,</span><span class="nt">h3</span><span class="o">,</span><span class="nt">h4</span><span class="o">,</span><span class="nt">h5</span><span class="o">,</span><span class="nt">h6</span><span class="o">,</span><span class="nc">.h4</span> <span class="p">{</span>
+        <span class="nt">color</span><span class="nd">:</span> <span class="nn">#5cb85c</span><span class="o">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.bs-callout-danger</span> <span class="p">{</span> <span class="nt">border-left-color</span><span class="nd">:</span> <span class="nn">#d9534f</span><span class="o">;</span> <span class="p">}</span>
+<span class="nc">.bs-callout-danger</span> <span class="p">{</span>
+    <span class="nt">h1</span><span class="o">,</span><span class="nt">h2</span><span class="o">,</span><span class="nt">h3</span><span class="o">,</span><span class="nt">h4</span><span class="o">,</span><span class="nt">h5</span><span class="o">,</span><span class="nt">h6</span><span class="o">,</span><span class="nc">.h4</span> <span class="p">{</span>
+        <span class="nt">color</span><span class="nd">:</span> <span class="nn">#d9534f</span><span class="o">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.bs-callout-warning</span> <span class="p">{</span> <span class="nt">border-left-color</span><span class="nd">:</span> <span class="nn">#f0ad4e</span><span class="o">;</span> <span class="p">}</span>
+<span class="nc">.bs-callout-warning</span> <span class="p">{</span>
+    <span class="nt">h1</span><span class="o">,</span><span class="nt">h2</span><span class="o">,</span><span class="nt">h3</span><span class="o">,</span><span class="nt">h4</span><span class="o">,</span><span class="nt">h5</span><span class="o">,</span><span class="nt">h6</span><span class="o">,</span><span class="nc">.h4</span> <span class="p">{</span>
+        <span class="nt">color</span><span class="nd">:</span> <span class="nn">#f0ad4e</span><span class="o">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.bs-callout-info</span> <span class="p">{</span> <span class="nt">border-left-color</span><span class="nd">:</span> <span class="nn">#5bc0de</span><span class="o">;</span> <span class="p">}</span>
+<span class="nc">.bs-callout-info</span> <span class="p">{</span>
+    <span class="nt">h1</span><span class="o">,</span><span class="nt">h2</span><span class="o">,</span><span class="nt">h3</span><span class="o">,</span><span class="nt">h4</span><span class="o">,</span><span class="nt">h5</span><span class="o">,</span><span class="nt">h6</span><span class="o">,</span><span class="nc">.h4</span> <span class="p">{</span>
+        <span class="nt">color</span><span class="nd">:</span> <span class="nn">#5bc0de</span><span class="o">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="tab-pane" id="tab-pane-css" role="tabpanel">
+<div class="highlight-css literal-block"><div class="highlight"><pre><span></span><span class="c">/* -- Custom Callout --------------------------------------------------- */</span>
+<span class="c">/* -- https://cpratt.co/twitter-bootstrap-callout-css-styles/ ---------- */</span>
+
+<span class="p">.</span><span class="nc">bs-callout</span> <span class="p">{</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">20</span><span class="kt">px</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#eee</span><span class="p">;</span>
+    <span class="k">border-left-width</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">border-radius</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">background</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">bs-callout</span> <span class="nt">h4</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">bs-callout</span> <span class="p">.</span><span class="nc">h4</span> <span class="p">{</span> <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">bs-callout</span> <span class="nt">p</span><span class="p">:</span><span class="nd">last-child</span> <span class="p">{</span> <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">bs-callout</span> <span class="nt">code</span> <span class="p">{</span> <span class="k">border-radius</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">bs-callout</span><span class="o">+</span><span class="p">.</span><span class="nc">bs-callout</span> <span class="p">{</span> <span class="k">margin-top</span><span class="p">:</span> <span class="mi">-5</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">bs-callout-default</span> <span class="p">{</span> <span class="k">border-left-color</span><span class="p">:</span> <span class="mh">#777</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">bs-callout-default</span> <span class="nt">h4</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">bs-callout-default</span> <span class="p">.</span><span class="nc">h4</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="mh">#777</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">bs-callout-primary</span> <span class="p">{</span> <span class="k">border-left-color</span><span class="p">:</span> <span class="mh">#428bca</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">bs-callout-primary</span> <span class="nt">h4</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">bs-callout-primary</span> <span class="p">.</span><span class="nc">h4</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="mh">#428bca</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">bs-callout-success</span> <span class="p">{</span> <span class="k">border-left-color</span><span class="p">:</span> <span class="mh">#5cb85c</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">bs-callout-success</span> <span class="nt">h4</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">bs-callout-success</span> <span class="p">.</span><span class="nc">h4</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="mh">#5cb85c</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">bs-callout-danger</span> <span class="p">{</span> <span class="k">border-left-color</span><span class="p">:</span> <span class="mh">#d9534f</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">bs-callout-danger</span> <span class="nt">h4</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">bs-callout-danger</span> <span class="p">.</span><span class="nc">h4</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="mh">#d9534f</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">bs-callout-warning</span> <span class="p">{</span> <span class="k">border-left-color</span><span class="p">:</span> <span class="mh">#f0ad4e</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">bs-callout-warning</span> <span class="nt">h4</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">bs-callout-warning</span> <span class="p">.</span><span class="nc">h4</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="mh">#f0ad4e</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">bs-callout-info</span> <span class="p">{</span> <span class="k">border-left-color</span><span class="p">:</span> <span class="mh">#5bc0de</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">bs-callout-info</span> <span class="nt">h4</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">bs-callout-info</span> <span class="p">.</span><span class="nc">h4</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="mh">#5bc0de</span><span class="p">;</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="alert alert-info" role="alert">
+<a href="#modal-callout-css" class="first" data-toggle="modal" data-target="#modal-callout-css" role="button"><strong>Note:</strong> This directive requires adding some custom CSS styles. (click here to open the modal)</a>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id16">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id16" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">callout</span><span class="p">::</span> <span class="c">&lt;Content&gt;</span>
+  <span class="nc">:title:</span> <span class="c">&lt;HeadingTitle&gt; [Optional]</span>
+
+<span class="c">  &lt;Content&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">callout</span><span class="p">::</span>
+
+  A <span class="s">``default``</span> call out with no title.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="bs-callout bs-callout-default">
+A <code class="docutils literal"><span class="pre">default</span></code> call out with no title.</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">callout</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  <span class="nc">:title:</span> <span class="nf">Heading for default callout</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="bs-callout bs-callout-default">
+<p class="h4">Heading for default callout</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">callout-primary</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  <span class="nc">:title:</span> <span class="nf">Heading for primary callout</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="bs-callout bs-callout-primary">
+<p class="h4">Heading for primary callout</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">callout-success</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  <span class="nc">:title:</span> <span class="nf">Heading for success callout</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="bs-callout bs-callout-success">
+<p class="h4">Heading for success callout</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">callout-info</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  <span class="nc">:title:</span> <span class="nf">Heading for info callout</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="bs-callout bs-callout-info">
+<p class="h4">Heading for info callout</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">callout-warning</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  <span class="nc">:title:</span> <span class="nf">Heading for warning callout</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="bs-callout bs-callout-warning">
+<p class="h4">Heading for warning callout</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">callout-danger</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  <span class="nc">:title:</span> <span class="nf">:fa:`exclamation-triangle fw`  Heading for danger callout</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="bs-callout bs-callout-danger">
+<p class="h4"><span class="fa fa-exclamation-triangle fa-fw"></span> Heading for danger callout</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="clearfix">
+<div class="page-header"><h1>Clearfix<a class="headerlink" href="#clearfix" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">clearfix</span><span class="p">::</span> visible-xs-block visible-sm
+</pre></div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="highlight-html literal-block"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;clearfix visible-xs-block visible-sm&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="collapsible">
+<div class="page-header"><h1>Collapsible<a class="headerlink" href="#collapsible" title="Permalink to this headline">¶</a></h1>
+</div><div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">button-primary</span><span class="p">::</span> <span class="gs">**Toggle the collapsible container below.**</span>
+  <span class="nc">:class:</span> <span class="nf">center-block sm</span>
+  <span class="nc">:collapse:</span> <span class="nf">div-id-to-collapse</span>
+  <span class="nc">:href:</span> <span class="nf">void</span>
+<span class="cp">.. .. Use ↑ `void` to render an anchor tag</span>
+
+<span class="cp">.. .. Use &quot;out/in&quot; to show and hide the div by default on page load</span>
+
+<span class="p">..</span> <span class="ow">container</span><span class="p">::</span> collapse out text-center
+  <span class="nc">:name:</span> <span class="nf">div-id-to-collapse</span>
+
+  |
+
+<span class="p">  ..</span> <span class="ow">jumbotron</span><span class="p">::</span>
+
+    <span class="na">:h1:</span><span class="nv">`😜💩😝`</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<a href="javascript:void(0)" class="btn btn-primary btn-sm center-block" data-toggle="collapse" data-target="#div-id-to-collapse" aria-controls="div-id-to-collapse" role="button"><strong>Toggle the collapsible container below.</strong></a>
+<div class="collapse out text-center" id="div-id-to-collapse">
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="jumbotron">
+<p class="h1">😜💩😝</p>
+
+</div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="container">
+<div class="page-header"><h1>Container<a class="headerlink" href="#container" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item"><span class="fa fa-info-circle fa-fw text-muted"></span> Containers do not have a class option, pass custom classes as an argument</li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id17">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id17" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">container</span><span class="p">::</span> <span class="c">&lt;Class&gt;</span>
+
+<span class="c">  &lt;Content&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">container</span><span class="p">::</span>
+
+  An empty <span class="s">``div``</span> with no <span class="s">``.container``</span> class
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div>
+An empty <code class="docutils literal"><span class="pre">div</span></code> with no <code class="docutils literal"><span class="pre">.container</span></code> class
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<hr />
+<div class="section" id="jumbotron">
+<h2>Jumbotron<a class="headerlink" href="#jumbotron" title="Permalink to this headline">¶</a></h2>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">jumbotron</span><span class="p">::</span>
+
+  <span class="na">:h3:</span><span class="nv">`I\&#39;m a Jumbotron`</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="jumbotron">
+<p class="h3">I’m a Jumbotron</p>
+
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="well">
+<h2>Well<a class="headerlink" href="#well" title="Permalink to this headline">¶</a></h2>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">well</span><span class="p">::</span>
+
+  I&#39;m a well
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="well">
+I’m a well
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">well-sm</span><span class="p">::</span>
+
+  I&#39;m a well-sm
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="well well-sm">
+I’m a well-sm
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="page-header">
+<h2>Page Header<a class="headerlink" href="#page-header" title="Permalink to this headline">¶</a></h2>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">page-header</span><span class="p">::</span>
+
+  <span class="na">:h3:</span><span class="nv">`Heading inside a .page-header`</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="page-header">
+<p class="h3">Heading inside a .page-header</p>
+
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="definition-list">
+<div class="page-header"><h1>Definition list<a class="headerlink" href="#definition-list" title="Permalink to this headline">¶</a></h1>
+</div><div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span>restructuredText
+  reStructuredText (sometimes abbreviated as RST, ReST, or reST) is a file
+  format for textual data used primarily in the Python programming language
+  community for technical documentation.
+
+Twitter Bootstrap
+  Bootstrap is a free and open-source front-end web framework for designing
+  websites and web applications. It contains HTML- and CSS-based design templates
+  for typography, forms, buttons, navigation and other interface components,
+  as well as optional JavaScript extensions.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<dl class="docutils">
+<dt>restructuredText</dt>
+<dd>reStructuredText (sometimes abbreviated as RST, ReST, or reST) is a file
+format for textual data used primarily in the Python programming language
+community for technical documentation.</dd>
+<dt>Twitter Bootstrap</dt>
+<dd>Bootstrap is a free and open-source front-end web framework for designing
+websites and web applications. It contains HTML- and CSS-based design templates
+for typography, forms, buttons, navigation and other interface components,
+as well as optional JavaScript extensions.</dd>
+</dl>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id18">
+<div class="code-block-caption"><span class="caption-text">Use the <code class="docutils literal"><span class="pre">..</span> <span class="pre">rst-class</span></code> directive to add a <code class="docutils literal"><span class="pre">dl-horizontal</span></code> class</span><a class="headerlink" href="#id18" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="hll"><span class="p">..</span> <span class="ow">rst-class</span><span class="p">::</span> dl-horizontal
+</span>
+restructuredText
+  reStructuredText (sometimes abbreviated as RST, ReST, or reST) is a file
+  format for textual data used primarily in the Python programming language
+  community for technical documentation.
+
+Twitter Bootstrap
+  Bootstrap is a free and open-source front-end web framework for designing
+  websites and web applications. It contains HTML- and CSS-based design templates
+  for typography, forms, buttons, navigation and other interface components,
+  as well as optional JavaScript extensions.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<dl class="dl-horizontal docutils">
+<dt>restructuredText</dt>
+<dd>reStructuredText (sometimes abbreviated as RST, ReST, or reST) is a file
+format for textual data used primarily in the Python programming language
+community for technical documentation.</dd>
+<dt>Twitter Bootstrap</dt>
+<dd>Bootstrap is a free and open-source front-end web framework for designing
+websites and web applications. It contains HTML- and CSS-based design templates
+for typography, forms, buttons, navigation and other interface components,
+as well as optional JavaScript extensions.</dd>
+</dl>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="grid">
+<div class="page-header"><h1>Grid<a class="headerlink" href="#grid" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item"><span class="fa fa-info-circle fa-fw text-muted"></span> <code class="docutils literal"><span class="pre">12,-,6,-</span></code> is parsed into <code class="docutils literal"><span class="pre">col-xs-12</span> <span class="pre">col-md-6</span></code></li>
+<li class="list-group-item"><span class="fa fa-info-circle fa-fw text-muted"></span> A <code class="docutils literal"><span class="pre">-</span></code> (dash) in the <code class="docutils literal"><span class="pre">width</span></code> option indicates that particular size class will not be added</li>
+<li class="list-group-item"><span class="fa fa-info-circle fa-fw text-muted"></span> You can also use the <code class="docutils literal"><span class="pre">ShorthandExpansion</span></code> in <code class="docutils literal"><span class="pre">push</span></code>, <code class="docutils literal"><span class="pre">pull</span></code> and <code class="docutils literal"><span class="pre">offset</span></code> columns</li>
+<li class="list-group-item"><span class="fa fa-link fa-fw text-muted"></span> <a class="reference external" href="https://getbootstrap.com/docs/3.3/css/#grid">https://getbootstrap.com/docs/3.3/css/#grid</a></li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id19">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id19" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">row</span><span class="p">::</span> <span class="c">&lt;Class&gt;</span>
+  <span class="nc">:class:</span> <span class="c">&lt;Class&gt;</span>
+
+<span class="p">  ..</span> <span class="ow">column</span><span class="p">::</span> <span class="c">&lt;Class&gt; [ShorthandExpansion: 12,-,6,-]</span>
+    <span class="nc">:class:</span> <span class="c">&lt;Class&gt;</span>
+    <span class="nc">:width:</span>  <span class="c">&lt;Integer&gt; or [ShorthandExpansion]</span>
+    <span class="nc">:offset:</span> <span class="c">&lt;Integer&gt; or [ShorthandExpansion]</span>
+    <span class="nc">:pull:</span>   <span class="c">&lt;Integer&gt; or [ShorthandExpansion]</span>
+    <span class="nc">:push:</span>   <span class="c">&lt;Integer&gt; or [ShorthandExpansion]</span>
+
+<span class="cp">.. A single integer will default to xs (mobile first)</span>
+<span class="cp">.. 6         → col-xs-6</span>
+
+<span class="cp">.. Use the ShorthandExpansion syntax to size your way up to desktop</span>
+<span class="cp">.. a `-` (dash) means &quot;skip this size class&quot;</span>
+<span class="cp">.. 12,-,6    → col-xs-12,col-sm-6</span>
+<span class="cp">.. 12,-,6,4  → col-xs-12,col-sm-6,col-lg-4</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="columns">
+<h2>Columns<a class="headerlink" href="#columns" title="Permalink to this headline">¶</a></h2>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id20">
+<div class="code-block-caption"><span class="caption-text">Pass width via an argument or the <code class="docutils literal"><span class="pre">:width:</span></code> option</span><a class="headerlink" href="#id20" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">row</span><span class="p">::</span>
+
+<span class="p">  ..</span> <span class="ow">column</span><span class="p">::</span> bg-success
+<span class="hll">    <span class="nc">:width:</span> <span class="nf">12,-,6</span>
+</span>
+    This is the first column.
+
+    <span class="s">``col-xs-12 col-md-6``</span>
+
+<span class="hll"><span class="p">  ..</span> <span class="ow">column</span><span class="p">::</span> 12,-,6,- bg-primary text-right
+</span>
+    This is the second column.
+
+    <span class="s">``col-xs-12 col-md-6``</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="row">
+<div class="col-xs-12 col-md-6 bg-success">
+<p>This is the first column.</p>
+<p><code class="docutils literal"><span class="pre">col-xs-12</span> <span class="pre">col-md-6</span></code></p>
+</div>
+<div class="col-xs-12 col-md-6 bg-primary text-right">
+<p>This is the second column.</p>
+<p><code class="docutils literal"><span class="pre">col-xs-12</span> <span class="pre">col-md-6</span></code></p>
+</div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="push-pull">
+<h2>Push &amp; Pull<a class="headerlink" href="#push-pull" title="Permalink to this headline">¶</a></h2>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id21">
+<div class="code-block-caption"><span class="caption-text">Push and pull columns via the <code class="docutils literal"><span class="pre">:push:</span></code> and <code class="docutils literal"><span class="pre">:pull:</span></code> options</span><a class="headerlink" href="#id21" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">row</span><span class="p">::</span>
+
+<span class="p">  ..</span> <span class="ow">column</span><span class="p">::</span> 12,0,6,0 bg-success
+<span class="hll">    <span class="nc">:push:</span> <span class="nf">-,-,6,-</span>
+</span>
+    This is the first column, but on <span class="nv">`md`</span> and larger, it has been pushed by <span class="nv">`6`</span>.
+
+    <span class="s">``col-xs-12 col-md-6 col-md-push-6 bg-success``</span>
+
+<span class="p">  ..</span> <span class="ow">column</span><span class="p">::</span> 12,0,6,0 bg-primary
+<span class="hll">    <span class="nc">:pull:</span> <span class="nf">-,-,6</span>
+</span>
+    This is the second column, but on <span class="nv">`md`</span> and larger, it has been pulled by <span class="nv">`6`</span>.
+
+    <span class="s">``col-xs-12 col-md-6 col-md-pull-6 bg-primary``</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="row">
+<div class="col-xs-12 col-md-6 col-md-push-6 bg-success">
+<p>This is the first column, but on <cite>md</cite> and larger, it has been pushed by <cite>6</cite>.</p>
+<p><code class="docutils literal"><span class="pre">col-xs-12</span> <span class="pre">col-md-6</span> <span class="pre">col-md-push-6</span> <span class="pre">bg-success</span></code></p>
+</div>
+<div class="col-xs-12 col-md-6 col-md-pull-6 bg-primary">
+<p>This is the second column, but on <cite>md</cite> and larger, it has been pulled by <cite>6</cite>.</p>
+<p><code class="docutils literal"><span class="pre">col-xs-12</span> <span class="pre">col-md-6</span> <span class="pre">col-md-pull-6</span> <span class="pre">bg-primary</span></code></p>
+</div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="offset">
+<h2>Offset<a class="headerlink" href="#offset" title="Permalink to this headline">¶</a></h2>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id22">
+<div class="code-block-caption"><span class="caption-text">Offset columns via the :offset: option</span><a class="headerlink" href="#id22" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="cp">.. Shorthand syntax (3,-,6,0) =&gt; (col-xs-offset-3, col-md-offset-6, col-lg-offset-0)</span>
+
+<span class="p">..</span> <span class="ow">row</span><span class="p">::</span>
+
+<span class="p">  ..</span> <span class="ow">column</span><span class="p">::</span>
+    <span class="nc">:width:</span> <span class="nf">6</span>
+<span class="hll">    <span class="nc">:offset:</span> <span class="nf">3</span>
+</span>
+<span class="p">    ..</span> <span class="ow">container</span><span class="p">::</span> well well-sm
+
+      This is a single column. It has been offset by 3 to center it on <span class="nv">`xs`</span> and larger.
+
+      <span class="s">``col-xs-6 col-xs-offset-3``</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="row">
+<div class="col-xs-6 col-xs-offset-3">
+<div class="well well-sm">
+<p>This is a single column. It has been offset by 3 to center it on <cite>xs</cite> and larger.</p>
+<p><code class="docutils literal"><span class="pre">col-xs-6</span> <span class="pre">col-xs-offset-3</span></code></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="images">
+<div class="page-header"><h1>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item"><span class="fa fa-link fa-fw text-muted"></span> <a class="reference external" href="https://getbootstrap.com/docs/3.3/css/#images">https://getbootstrap.com/docs/3.3/css/#images</a></li>
+<li class="list-group-item"><span class="fa fa-link fa-fw text-muted"></span> <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html#image">http://docutils.sourceforge.net/docs/ref/rst/directives.html#image</a></li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id23">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id23" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> <span class="c">&lt;URL&gt;</span>
+  <span class="nc">:class:</span> <span class="c">&lt;Class&gt; [img-responsive, img-rounded, img-circle, img-thumbnail]</span>
+  <span class="nc">:height:</span> <span class="c">&lt;Height&gt; [10em 10ex 10px 10in 10cm 10mm 10pt 10pc 10%]</span>
+  <span class="nc">:width:</span> <span class="c">&lt;Width&gt; [10em 10ex 10px 10in 10cm 10mm 10pt 10pc 10%]</span>
+  <span class="nc">:align:</span> <span class="c">&lt;Alignment&gt; [top, middle, bottom, left, center, right]</span>
+  <span class="nc">:target:</span> <span class="c">&lt;URI or reference name&gt;</span>
+  <span class="nc">:alt:</span> <span class="c">&lt;AltText&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> images/placeholder-50.jpg
+   <span class="nc">:class:</span> <span class="nf">img-responsive</span>
+   <span class="nc">:align:</span> <span class="nf">center</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<img alt="_images/placeholder-50.jpg" class="img-responsive align-center" src="_images/placeholder-50.jpg" />
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> images/placeholder-50.jpg
+   <span class="nc">:class:</span> <span class="nf">img-rounded</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<img alt="_images/placeholder-50.jpg" class="img-rounded" src="_images/placeholder-50.jpg" />
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> images/placeholder-50.jpg
+   <span class="nc">:class:</span> <span class="nf">img-circle</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<img alt="_images/placeholder-50.jpg" class="img-circle" src="_images/placeholder-50.jpg" />
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> images/placeholder-50.jpg
+   <span class="nc">:class:</span> <span class="nf">img-thumbnail</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<img alt="_images/placeholder-50.jpg" class="img-thumbnail" src="_images/placeholder-50.jpg" />
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">row</span><span class="p">::</span>
+
+<span class="p">  ..</span> <span class="ow">column</span><span class="p">::</span> 10,6,0,4
+
+<span class="p">    ..</span> <span class="ow">container</span><span class="p">::</span> thumbnail
+
+<span class="p">      ..</span> <span class="ow">image</span><span class="p">::</span> images/placeholder-200.jpg
+
+<span class="p">      ..</span> <span class="ow">container</span><span class="p">::</span> caption
+
+        <span class="na">:h4:</span><span class="nv">`Thumbnail Label`</span>
+
+        Some Text
+
+<span class="p">        ..</span> <span class="ow">button-primary</span><span class="p">::</span> <span class="na">:fa:</span><span class="nv">`link fw`</span> Link
+          <span class="nc">:class:</span> <span class="nf">primary block</span>
+          <span class="nc">:href:</span> <span class="nf">https://getbootstrap.com/docs/3.3/css/#buttons</span>
+          <span class="nc">:target:</span> <span class="nf">_blank</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="row">
+<div class="col-xs-12 col-xs-10 col-sm-6 col-lg-4">
+<div class="thumbnail">
+<img alt="_images/placeholder-200.jpg" src="_images/placeholder-200.jpg" />
+<div class="caption">
+<p class="h4">Thumbnail Label</p>
+<p>Some Text</p>
+<a href="https://getbootstrap.com/docs/3.3/css/#buttons" class="btn btn-primary btn-block primary" role="button" target="_blank"><span class="fa fa-link fa-fw"></span>Link</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="lead-paragraph">
+<div class="page-header"><h1>Lead Paragraph<a class="headerlink" href="#lead-paragraph" title="Permalink to this headline">¶</a></h1>
+</div><div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">lead</span><span class="p">::</span> A <span class="ge">*single*</span> <span class="s">``.lead``</span> paragraph rendered as a <span class="s">``p.lead``</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<p class="lead">A <em>single</em> <code class="docutils literal"><span class="pre">.lead</span></code> paragraph rendered as a <code class="docutils literal"><span class="pre">p.lead</span></code></p>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">lead</span><span class="p">::</span> A <span class="s">``.lead``</span> paragraph
+
+  A second paragraph rendered as a <span class="s">``div.lead &gt; p``</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="lead">
+<p>A <code class="docutils literal"><span class="pre">.lead</span></code> paragraph</p>
+<p>A second paragraph rendered as a <code class="docutils literal"><span class="pre">div.lead</span> <span class="pre">&gt;</span> <span class="pre">p</span></code></p>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="cp">.. Contextual variants</span>
+
+<span class="p">..</span> <span class="ow">lead-muted</span><span class="p">::</span> A lead paragraph with a <span class="s">``.text-muted``</span> class
+
+<span class="p">..</span> <span class="ow">lead-primary</span><span class="p">::</span> A lead paragraph with a <span class="s">``.text-primary``</span> class
+
+<span class="p">..</span> <span class="ow">lead-success</span><span class="p">::</span> A lead paragraph with a <span class="s">``.text-success``</span> class
+
+<span class="p">..</span> <span class="ow">lead-info</span><span class="p">::</span> A lead paragraph with a <span class="s">``.text-info``</span> class
+
+<span class="p">..</span> <span class="ow">lead-warning</span><span class="p">::</span> A lead paragraph with a <span class="s">``.text-warning``</span> class
+
+<span class="p">..</span> <span class="ow">lead-danger</span><span class="p">::</span> A lead paragraph with a <span class="s">``.text-danger``</span> class
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<p class="lead text-muted">A lead paragraph with a <code class="docutils literal"><span class="pre">.text-muted</span></code> class</p>
+<p class="lead text-primary">A lead paragraph with a <code class="docutils literal"><span class="pre">.text-primary</span></code> class</p>
+<p class="lead text-success">A lead paragraph with a <code class="docutils literal"><span class="pre">.text-success</span></code> class</p>
+<p class="lead text-info">A lead paragraph with a <code class="docutils literal"><span class="pre">.text-info</span></code> class</p>
+<p class="lead text-warning">A lead paragraph with a <code class="docutils literal"><span class="pre">.text-warning</span></code> class</p>
+<p class="lead text-danger">A lead paragraph with a <code class="docutils literal"><span class="pre">.text-danger</span></code> class</p>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="line-rule">
+<div class="page-header"><h1>Line Rule<a class="headerlink" href="#line-rule" title="Permalink to this headline">¶</a></h1>
+</div><div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id24">
+<div class="code-block-caption"><span class="caption-text">&lt;hr /&gt;</span><a class="headerlink" href="#id24" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">hr</span><span class="p">::</span>
+
+<span class="cp">.. use a custom class</span>
+
+<span class="p">..</span> <span class="ow">hr</span><span class="p">::</span> dotted
+
+<span class="p">..</span> <span class="ow">hr</span><span class="p">::</span> dashed
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<hr />
+<hr class="dotted"/>
+<hr class="dashed"/>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id25">
+<div class="code-block-caption"><span class="caption-text">&lt;br /&gt;</span><a class="headerlink" href="#id25" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">br</span><span class="p">::</span>
+
+<span class="p">..</span> <span class="ow">br</span><span class="p">::</span> small
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<br />
+<br class="small"/>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="lists">
+<div class="page-header"><h1>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h1>
+</div><div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="hll"><span class="p">..</span> <span class="ow">rst-class</span><span class="p">::</span> list-unstyled
+</span>
+<span class="m">#.</span> This is a auto-enumerated <span class="s">``list-unstyled``</span>.
+<span class="m">#.</span> This is the second item in the <span class="s">``list-unstyled``</span>.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<ol class="list-unstyled arabic simple">
+<li>This is a auto-enumerated <code class="docutils literal"><span class="pre">list-unstyled</span></code>.</li>
+<li>This is the second item in the <code class="docutils literal"><span class="pre">list-unstyled</span></code>.</li>
+</ol>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="hll"><span class="p">..</span> <span class="ow">rst-class</span><span class="p">::</span> list-inline
+</span>
+<span class="m">#.</span> Inline Item #1
+<span class="m">#.</span> Inline Item #2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<ol class="list-inline arabic simple">
+<li>Inline Item #1</li>
+<li>Inline Item #2</li>
+</ol>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="m">*</span> This is a bulleted list.
+<span class="m">*</span> It has two items, the second
+  item uses two lines. (note the indentation)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<ul>
+<li>This is a bulleted list.</li>
+<li>It has two items, the second
+item uses two lines. (note the indentation)</li>
+</ul>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="m">3.</span> This is a numbered list.
+<span class="m">4.</span> This is the fourth item in the list.
+<span class="m">#.</span> This should be the fifth item in the list.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<ol class="arabic simple" start="3">
+<li>This is a numbered list.</li>
+<li>This is the fourth item in the list.</li>
+<li>This should be the fifth item in the list.</li>
+</ol>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="m">#.</span> This is a auto-enumerated list.
+<span class="m">#.</span> This is the second item in the list.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<ol class="arabic simple">
+<li>This is a auto-enumerated list.</li>
+<li>This is the second item in the list.</li>
+</ol>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<hr />
+<div class="section" id="basic-list-group">
+<h2>Basic List Group<a class="headerlink" href="#basic-list-group" title="Permalink to this headline">¶</a></h2>
+<p>List items <cite>within list groups</cite> are automatically applied the <code class="docutils literal"><span class="pre">list-group-item</span></code> class when in a parent <code class="docutils literal"><span class="pre">list-group</span></code>.</p>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="hll"><span class="p">..</span> <span class="ow">rst-class</span><span class="p">::</span> list-group
+</span>
+<span class="m">-</span> <span class="na">:fa:</span><span class="nv">`home fw`</span>  Home with a badge icon <span class="na">:badge:</span><span class="nv">`13`</span>
+<span class="m">-</span> <span class="na">:fa:</span><span class="nv">`exclamation fw`</span>  Add <span class="s">``fw``</span> for font awesome icons inside a list
+<span class="m">-</span> <span class="na">:fa:</span><span class="nv">`info fw`</span>  Bullets are &quot;-&quot;, &quot;*&quot; or &quot;+&quot;
+<span class="m">-</span> <span class="na">:fa:</span><span class="nv">`info fw`</span>  Continuing text must be aligned
+  after the bullet and whitespace.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<ul class="list-group">
+<li class="list-group-item"><span class="fa fa-home fa-fw"></span> Home with a badge icon <span class="badge">13</span></li>
+<li class="list-group-item"><span class="fa fa-exclamation fa-fw"></span> Add <code class="docutils literal"><span class="pre">fw</span></code> for font awesome icons inside a list</li>
+<li class="list-group-item"><span class="fa fa-info fa-fw"></span> Bullets are “-“, “*” or “+”</li>
+<li class="list-group-item"><span class="fa fa-info fa-fw"></span> Continuing text must be aligned
+after the bullet and whitespace.</li>
+</ul>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="linked-items">
+<h2>Linked Items<a class="headerlink" href="#linked-items" title="Permalink to this headline">¶</a></h2>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">list-group</span><span class="p">::</span>
+
+<span class="p"> ..</span> <span class="ow">list-group-item-success</span><span class="p">::</span>
+    <span class="nc">:href:</span> <span class="nf">http://www.google.com</span>
+    <span class="nc">:target:</span> <span class="nf">_blank</span>
+
+    A link to Google
+
+<span class="p"> ..</span> <span class="ow">list-group-item-info</span><span class="p">::</span>
+    <span class="nc">:href:</span> <span class="nf">http://www.amazon.com</span>
+    <span class="nc">:target:</span> <span class="nf">_blank</span>
+
+    A link to Amazon
+
+<span class="p"> ..</span> <span class="ow">list-group-item-warning</span><span class="p">::</span>
+    <span class="nc">:href:</span> <span class="nf">http://www.facebook.com</span>
+    <span class="nc">:target:</span> <span class="nf">_blank</span>
+
+    A link to Facebook
+
+<span class="p"> ..</span> <span class="ow">list-group-item-danger</span><span class="p">::</span>
+    <span class="nc">:button:</span>
+    <span class="nc">:name:</span> <span class="nf">id-for-success</span>
+
+    Use the <span class="s">``:button:``</span> flag to render this item as a button
+
+<span class="p"> ..</span> <span class="ow">list-group-item</span><span class="p">::</span> disabled
+    <span class="nc">:button:</span>
+
+    This is a disabled button
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="list-group">
+<a class="list-group-item list-group-item-success" href="http://www.google.com" target="_blank">
+A link to Google
+</a>
+<a class="list-group-item list-group-item-info" href="http://www.amazon.com" target="_blank">
+A link to Amazon
+</a>
+<a class="list-group-item list-group-item-warning" href="http://www.facebook.com" target="_blank">
+A link to Facebook
+</a>
+<button class="list-group-item list-group-item-danger" id="id-for-success" type="button">
+Use the <code class="docutils literal"><span class="pre">:button:</span></code> flag to render this item as a button
+</button>
+<button class="list-group-item disabled" type="button">
+This is a disabled button
+</button>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="contextual-items">
+<h2>Contextual Items<a class="headerlink" href="#contextual-items" title="Permalink to this headline">¶</a></h2>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">list-group</span><span class="p">::</span>
+
+<span class="hll"><span class="p">  ..</span> <span class="ow">list-group-item-success</span><span class="p">::</span>
+</span>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+<span class="p">  ..</span> <span class="ow">list-group-item-info</span><span class="p">::</span>
+
+    Cum sociis natoque penatibus et magnis dis parturient montes.
+
+<span class="p">  ..</span> <span class="ow">list-group-item-warning</span><span class="p">::</span>
+
+    In eu ultricies dolor. Phasellus quis odio non nulla facilisis.
+
+<span class="p">  ..</span> <span class="ow">list-group-item-danger</span><span class="p">::</span>
+
+     Ut lobortis sed velit eget pellentesque. Maecenas et sapien.
+
+<span class="p">  ..</span> <span class="ow">list-group-item</span><span class="p">::</span> disabled
+
+     Aenean at faucibus tellus. Curabitur tincidunt dolor vitae magna porttitor.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="list-group">
+<div class="list-group-item list-group-item-success">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</div>
+<div class="list-group-item list-group-item-info">
+Cum sociis natoque penatibus et magnis dis parturient montes.
+</div>
+<div class="list-group-item list-group-item-warning">
+In eu ultricies dolor. Phasellus quis odio non nulla facilisis.
+</div>
+<div class="list-group-item list-group-item-danger">
+Ut lobortis sed velit eget pellentesque. Maecenas et sapien.
+</div>
+<div class="list-group-item disabled">
+Aenean at faucibus tellus. Curabitur tincidunt dolor vitae magna porttitor.
+</div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="custom-content">
+<h2>Custom Content<a class="headerlink" href="#custom-content" title="Permalink to this headline">¶</a></h2>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">list-group</span><span class="p">::</span>
+
+<span class="p"> ..</span> <span class="ow">list-group-item-success</span><span class="p">::</span>
+
+<span class="hll">    <span class="na">:h4:</span><span class="nv">`Text Heading for item`</span>
+</span>
+<span class="hll">    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</span>
+<span class="p"> ..</span> <span class="ow">list-group-item-info</span><span class="p">::</span>
+    <span class="nc">:href:</span> <span class="nf">http://www.google.com</span>
+    <span class="nc">:target:</span> <span class="nf">_blank</span>
+
+    <span class="na">:h4:</span><span class="nv">`Text Heading for item`</span>
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+<span class="p"> ..</span> <span class="ow">list-group-item-warning</span><span class="p">::</span>
+    <span class="nc">:button:</span>
+
+    <span class="na">:h4:</span><span class="nv">`Text Heading for item`</span>
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+<span class="p"> ..</span> <span class="ow">list-group-item-danger</span><span class="p">::</span>
+    <span class="nc">:href:</span> <span class="nf">http://www.google.com</span>
+    <span class="nc">:target:</span> <span class="nf">_blank</span>
+
+    <span class="na">:h4:</span><span class="nv">`:fa:\`</span>book fw pl\` Text Heading for item`
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+<span class="p"> ..</span> <span class="ow">list-group-item</span><span class="p">::</span> disabled
+    <span class="nc">:href:</span> <span class="nf">http://www.google.com</span>
+    <span class="nc">:target:</span> <span class="nf">_blank</span>
+
+    <span class="na">:h4:</span><span class="nv">`:fa:\`</span>times fw pl\` Text Heading for item`
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="list-group">
+<div class="list-group-item list-group-item-success">
+<p class="h4 list-group-item-heading">Text Heading for item</p>
+<p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+<a class="list-group-item list-group-item-info" href="http://www.google.com" target="_blank">
+<p class="h4 list-group-item-heading">Text Heading for item</p>
+<p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</a>
+<button class="list-group-item list-group-item-warning" type="button">
+<p class="h4 list-group-item-heading">Text Heading for item</p>
+<p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</button>
+<a class="list-group-item list-group-item-danger" href="http://www.google.com" target="_blank">
+<p class="h4 list-group-item-heading"><span class="fa fa-book fa-fw fa-pull-left"></span>Text Heading for item</p>
+<p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</a>
+<a class="list-group-item disabled" href="http://www.google.com" target="_blank">
+<p class="h4 list-group-item-heading"><span class="fa fa-times fa-fw fa-pull-left"></span>Text Heading for item</p>
+<p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</a>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="media-object">
+<div class="page-header"><h1>Media Object<a class="headerlink" href="#media-object" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item"><p class="first">Version <code class="docutils literal"><span class="pre">3.3.2</span></code> or newer has a bug where this is not displayed correctly</p>
+<ul>
+<li><span class="fa fa-info-circle fa-fw text-muted"></span> <a class="reference external" href="https://github.com/twbs/bootstrap/issues/15958">https://github.com/twbs/bootstrap/issues/15958</a></li>
+<li><span class="fa fa-info-circle fa-fw text-muted"></span> <a class="reference external" href="https://github.com/twbs/bootstrap/issues/15795">https://github.com/twbs/bootstrap/issues/15795</a></li>
+<li><span class="fa fa-info-circle fa-fw text-muted"></span> For <code class="docutils literal"><span class="pre">3.3.7</span></code>, add <code class="docutils literal"><span class="pre">width:</span> <span class="pre">10%;</span></code> to <code class="docutils literal"><span class="pre">.media-left</span></code> and <code class="docutils literal"><span class="pre">.media-right</span></code> for a quick fix</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id26">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id26" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">media</span><span class="p">::</span> <span class="c">&lt;Class&gt;</span>
+
+<span class="p">  ..</span> <span class="ow">media-left</span><span class="p">::</span> <span class="c">&lt;Class&gt; [media-top, media-middle, media-bottom]</span>
+<span class="p">  ..</span> <span class="ow">media-right</span><span class="p">::</span> <span class="c">&lt;Class&gt; [media-top, media-middle, media-bottom]</span>
+
+<span class="p">  ..</span> <span class="ow">media-body</span><span class="p">::</span> <span class="c">&lt;MediaHeading&gt;</span>
+    <span class="nc">:heading-target:</span> <span class="c">&lt;URI&gt;</span>
+    <span class="nc">:page-header:</span> <span class="c">&lt;Flag&gt; {# wrap MediaHeading in a div.page-header #}</span>
+
+<span class="c">    &lt;Content&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="alignment">
+<h2>Alignment<a class="headerlink" href="#alignment" title="Permalink to this headline">¶</a></h2>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id27">
+<div class="code-block-caption"><span class="caption-text">Pass alignment classes as arguments</span><a class="headerlink" href="#id27" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">media</span><span class="p">::</span>
+
+<span class="hll"><span class="p">  ..</span> <span class="ow">media-left</span><span class="p">::</span> media-top
+</span>
+<span class="p">    ..</span> <span class="ow">image</span><span class="p">::</span> images/placeholder-50.jpg
+      <span class="nc">:target:</span> <span class="nf">http://google.com</span>
+
+<span class="p">  ..</span> <span class="ow">media-body</span><span class="p">::</span> Media heading
+
+    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+    ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
+    tempus viverra turpis.
+
+<span class="p">..</span> <span class="ow">media</span><span class="p">::</span>
+
+<span class="hll"><span class="p">  ..</span> <span class="ow">media-left</span><span class="p">::</span> media-middle
+</span>
+<span class="p">    ..</span> <span class="ow">image</span><span class="p">::</span> images/placeholder-50.jpg
+
+<span class="p">  ..</span> <span class="ow">media-body</span><span class="p">::</span> Media heading
+
+    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+    ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
+    tempus viverra turpis.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="media">
+<div class="media-left media-top">
+<a class="reference external image-reference" href="http://google.com"><img alt="_images/placeholder-50.jpg" class="media-object" src="_images/placeholder-50.jpg" /></a>
+</div>
+<div class="media-body">
+<p class="h4 media-heading">Media heading</p>
+<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
+tempus viverra turpis.</p>
+</div>
+</div>
+<div class="media">
+<div class="media-left media-middle">
+<img alt="_images/placeholder-50.jpg" class="media-object" src="_images/placeholder-50.jpg" />
+</div>
+<div class="media-body">
+<p class="h4 media-heading">Media heading</p>
+<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
+tempus viverra turpis.</p>
+</div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">media</span><span class="p">::</span> text-right
+
+<span class="hll"><span class="p">  ..</span> <span class="ow">media-right</span><span class="p">::</span> media-middle
+</span>
+<span class="p">    ..</span> <span class="ow">image</span><span class="p">::</span> images/placeholder-50.jpg
+
+<span class="p">  ..</span> <span class="ow">media-body</span><span class="p">::</span> Media heading
+
+    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+    ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
+    tempus viverra turpis.
+
+<span class="p">..</span> <span class="ow">media</span><span class="p">::</span> text-right
+
+<span class="hll"><span class="p">  ..</span> <span class="ow">media-right</span><span class="p">::</span> media-bottom
+</span>
+<span class="p">    ..</span> <span class="ow">image</span><span class="p">::</span> images/placeholder-50.jpg
+
+<span class="p">  ..</span> <span class="ow">media-body</span><span class="p">::</span> Media heading
+
+    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+    ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
+    tempus viverra turpis.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="media text-right">
+<div class="media-body">
+<p class="h4 media-heading">Media heading</p>
+<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
+tempus viverra turpis.</p>
+</div>
+<div class="media-right media-middle">
+<img alt="_images/placeholder-50.jpg" class="media-object" src="_images/placeholder-50.jpg" />
+</div>
+</div>
+<div class="media text-right">
+<div class="media-body">
+<p class="h4 media-heading">Media heading</p>
+<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
+tempus viverra turpis.</p>
+</div>
+<div class="media-right media-bottom">
+<img alt="_images/placeholder-50.jpg" class="media-object" src="_images/placeholder-50.jpg" />
+</div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="media-icons">
+<h2>Media Icons<a class="headerlink" href="#media-icons" title="Permalink to this headline">¶</a></h2>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id28">
+<div class="code-block-caption"><span class="caption-text">Use icons and add links to headings</span><a class="headerlink" href="#id28" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">media</span><span class="p">::</span> text-left
+
+<span class="p">  ..</span> <span class="ow">media-left</span><span class="p">::</span> media-middle
+
+<span class="hll">    <span class="na">:fa:</span><span class="nv">`file-code-o 3x fw tm`</span>
+</span>
+<span class="p">  ..</span> <span class="ow">media-body</span><span class="p">::</span> Media heading link
+    <span class="nc">:heading-target:</span> <span class="nf">https://www.google.com</span>
+
+    Cras sit amet nibh libero, in gravida nulla.
+
+<span class="p">..</span> <span class="ow">media</span><span class="p">::</span> text-right
+
+<span class="p">  ..</span> <span class="ow">media-right</span><span class="p">::</span> media-middle
+
+    <span class="na">:fa:</span><span class="nv">`file-pdf-o 3x fw tm`</span>
+
+<span class="p">  ..</span> <span class="ow">media-body</span><span class="p">::</span> Media heading link
+    <span class="nc">:heading-target:</span> <span class="nf">https://www.google.com</span>
+
+    Nulla vel metus scelerisque ante sollicitudin commodo.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="media text-left">
+<div class="media-left media-middle">
+<span class="fa fa-file-code-o fa-3x fa-fw text-muted"></span>
+</div>
+<div class="media-body">
+<p><a class="h4 media-heading reference external" href="https://www.google.com">Media heading link</a></p>
+<p>Cras sit amet nibh libero, in gravida nulla.</p>
+</div>
+</div>
+<div class="media text-right">
+<div class="media-body">
+<p><a class="h4 media-heading reference external" href="https://www.google.com">Media heading link</a></p>
+<p>Nulla vel metus scelerisque ante sollicitudin commodo.</p>
+</div>
+<div class="media-right media-middle">
+<span class="fa fa-file-pdf-o fa-3x fa-fw text-muted"></span>
+</div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="hll"><span class="p">..</span> <span class="ow">media</span><span class="p">::</span> text-left text-success
+</span>
+<span class="p">  ..</span> <span class="ow">media-left</span><span class="p">::</span> media-middle
+
+<span class="hll">    <span class="na">:fa:</span><span class="nv">`comment 3x fw`</span>
+</span>
+<span class="p">  ..</span> <span class="ow">media-body</span><span class="p">::</span> Media heading
+
+    Cras sit amet nibh libero, in gravida nulla.
+
+<span class="p">..</span> <span class="ow">media</span><span class="p">::</span> text-right text-danger
+
+<span class="p">  ..</span> <span class="ow">media-right</span><span class="p">::</span> media-middle
+
+    <span class="na">:fa:</span><span class="nv">`comment-o 3x fw`</span>
+
+<span class="p">  ..</span> <span class="ow">media-body</span><span class="p">::</span> Media heading
+
+    Nulla vel metus scelerisque ante sollicitudin commodo.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="media text-left text-success">
+<div class="media-left media-middle">
+<span class="fa fa-comment fa-3x fa-fw"></span>
+</div>
+<div class="media-body">
+<p class="h4 media-heading">Media heading</p>
+<p>Cras sit amet nibh libero, in gravida nulla.</p>
+</div>
+</div>
+<div class="media text-right text-danger">
+<div class="media-body">
+<p class="h4 media-heading">Media heading</p>
+<p>Nulla vel metus scelerisque ante sollicitudin commodo.</p>
+</div>
+<div class="media-right media-middle">
+<span class="fa fa-comment-o fa-3x fa-fw"></span>
+</div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="nested-lists">
+<h2>Nested Lists<a class="headerlink" href="#nested-lists" title="Permalink to this headline">¶</a></h2>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id29">
+<div class="code-block-caption"><span class="caption-text">If a <code class="docutils literal"><span class="pre">media</span></code> item is a direct child of a <code class="docutils literal"><span class="pre">media-list</span></code>, it will be rendered with a <code class="docutils literal"><span class="pre">ul</span></code> instead of a <code class="docutils literal"><span class="pre">div</span></code></span><a class="headerlink" href="#id29" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">media-list</span><span class="p">::</span>
+
+<span class="hll"><span class="p">  ..</span> <span class="ow">media</span><span class="p">::</span>
+</span>
+<span class="p">    ..</span> <span class="ow">media-left</span><span class="p">::</span>
+
+<span class="p">      ..</span> <span class="ow">image</span><span class="p">::</span> images/placeholder-50.jpg
+        <span class="nc">:target:</span> <span class="nf">http://google.com</span>
+
+<span class="p">    ..</span> <span class="ow">media-body</span><span class="p">::</span> Media Heading
+
+      Nulla vel metus scelerisque ante sollicitudin commodo.
+
+<span class="hll"><span class="p">      ..</span> <span class="ow">media</span><span class="p">::</span>
+</span>
+<span class="p">        ..</span> <span class="ow">media-left</span><span class="p">::</span>
+
+<span class="p">          ..</span> <span class="ow">image</span><span class="p">::</span> images/placeholder-50.jpg
+            <span class="nc">:target:</span> <span class="nf">http://google.com</span>
+
+<span class="p">        ..</span> <span class="ow">media-body</span><span class="p">::</span> Nested Media Heading
+
+          Cras sit amet nibh libero, in gravida nulla.
+
+<span class="hll"><span class="p">  ..</span> <span class="ow">media</span><span class="p">::</span>
+</span>
+<span class="p">    ..</span> <span class="ow">media-left</span><span class="p">::</span>
+
+<span class="p">      ..</span> <span class="ow">image</span><span class="p">::</span> images/placeholder-50.jpg
+        <span class="nc">:target:</span> <span class="nf">http://google.com</span>
+
+<span class="p">    ..</span> <span class="ow">media-body</span><span class="p">::</span> Media Heading
+
+      Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<ul class="media-list">
+<li class="media">
+<div class="media-left">
+<a class="reference external image-reference" href="http://google.com"><img alt="_images/placeholder-50.jpg" class="media-object" src="_images/placeholder-50.jpg" /></a>
+</div>
+<div class="media-body">
+<p class="h4 media-heading">Media Heading</p>
+<p>Nulla vel metus scelerisque ante sollicitudin commodo.</p>
+<div class="media">
+<div class="media-left">
+<a class="reference external image-reference" href="http://google.com"><img alt="_images/placeholder-50.jpg" class="media-object" src="_images/placeholder-50.jpg" /></a>
+</div>
+<div class="media-body">
+<p class="h4 media-heading">Nested Media Heading</p>
+<p>Cras sit amet nibh libero, in gravida nulla.</p>
+</div>
+</div>
+</div>
+</li>
+<li class="media">
+<div class="media-left">
+<a class="reference external image-reference" href="http://google.com"><img alt="_images/placeholder-50.jpg" class="media-object" src="_images/placeholder-50.jpg" /></a>
+</div>
+<div class="media-body">
+<p class="h4 media-heading">Media Heading</p>
+<p>Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="modal">
+<div class="page-header"><h1>Modal<a class="headerlink" href="#modal" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item"><span class="fa fa-link fa-fw text-muted"></span> <a class="reference external" href="https://getbootstrap.com/docs/3.3/javascript/#modals">https://getbootstrap.com/docs/3.3/javascript/#modals</a></li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id30">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id30" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">modal</span><span class="p">::</span>
+    <span class="nc">:name:</span> <span class="c">&lt;HTML ID&gt;</span>
+
+<span class="p">    ..</span> <span class="ow">modal-header</span><span class="p">::</span> <span class="c">&lt;Content&gt;</span>
+
+<span class="p">    ..</span> <span class="ow">modal-body</span><span class="p">::</span> <span class="c">&lt;Content&gt;</span>
+
+<span class="c">      &lt;Content&gt;</span>
+
+<span class="p">    ..</span> <span class="ow">modal-footer</span><span class="p">::</span>
+      <span class="nc">:close-class:</span> <span class="c">[primary,success,info,warning,danger]</span>
+      <span class="nc">:close-text:</span> <span class="c">&lt;Content&gt; {# default: Close #}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="id1">
+<h2>Modal<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">button-primary</span><span class="p">::</span> Open modal
+  <span class="nc">:modal-target:</span> <span class="nf">modal-id-demo</span>
+
+<span class="p">..</span> <span class="ow">modal</span><span class="p">::</span>
+  <span class="nc">:name:</span> <span class="nf">modal-id-demo</span>
+
+<span class="p">  ..</span> <span class="ow">modal-header</span><span class="p">::</span> Modal title
+
+<span class="p">  ..</span> <span class="ow">modal-body</span><span class="p">::</span> One fine body...
+
+    and another fine one here.
+
+<span class="p">  ..</span> <span class="ow">modal-footer</span><span class="p">::</span>
+    <span class="nc">:close-class:</span> <span class="nf">primary</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<button class="btn btn-primary" data-toggle="modal" data-target="#modal-id-demo" type="button">Open modal</button>
+<div class="modal fade" id="modal-id-demo" role="dialog" tabindex="-1">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<p class="h4 modal-title">Modal title</p>
+</div>
+<div class="modal-body">
+<p>One fine body…</p>
+<p>and another fine one here.</p>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id31">
+<div class="code-block-caption"><span class="caption-text">Prefix your modal names with <code class="docutils literal"><span class="pre">#modal-{id}</span></code> and open them with inline references</span><a class="headerlink" href="#id31" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="cp">.. Prefix your modals with ``modal-{id}`` and we append the ``toggle`` and ``target`` attributes.</span>
+
+A paragraph with a <span class="s">`link which opens a modal </span><span class="si">&lt;#modal-no-footer-demo&gt;</span><span class="s">`_</span> with no footer.
+
+<span class="p">..</span> <span class="ow">button-primary</span><span class="p">::</span> Open the same modal with a button
+  <span class="nc">:modal-target:</span> <span class="nf">modal-no-footer-demo</span>
+
+<span class="p">..</span> <span class="ow">modal</span><span class="p">::</span>
+  <span class="nc">:name:</span> <span class="nf">modal-no-footer-demo</span>
+
+<span class="p">  ..</span> <span class="ow">modal-header</span><span class="p">::</span> Modal title
+
+<span class="p">  ..</span> <span class="ow">modal-body</span><span class="p">::</span> A modal with no footer.
+
+<span class="p">    ..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">rest</span>
+
+        <span class="p">..</span> <span class="ow">modal</span><span class="p">::</span>
+          <span class="nc">:name:</span> <span class="nf">modal-no-footer</span>
+
+        <span class="p">  ..</span> <span class="ow">modal-header</span><span class="p">::</span> Modal title
+
+        <span class="p">  ..</span> <span class="ow">modal-body</span><span class="p">::</span> Modal body
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<p>A paragraph with a <a class="reference ref-modal internal" data-target="#modal-no-footer-demo" data-toggle="modal" href="#modal-no-footer-demo">link which opens a modal</a> with no footer.</p>
+<button class="btn btn-primary" data-toggle="modal" data-target="#modal-no-footer-demo" type="button">Open the same modal with a button</button>
+<div class="modal fade" id="modal-no-footer-demo" role="dialog" tabindex="-1">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<p class="h4 modal-title">Modal title</p>
+</div>
+<div class="modal-body">
+<p>A modal with no footer.</p>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">modal</span><span class="p">::</span>
+  <span class="nc">:name:</span> <span class="nf">modal-no-footer</span>
+
+<span class="p">  ..</span> <span class="ow">modal-header</span><span class="p">::</span> Modal title
+
+<span class="p">  ..</span> <span class="ow">modal-body</span><span class="p">::</span> Modal body
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">button-link</span><span class="p">::</span> Open modal-lg with body only
+  <span class="nc">:modal-target:</span> <span class="nf">modal-lg-body-demo</span>
+
+<span class="p">..</span> <span class="ow">modal</span><span class="p">::</span>
+  <span class="nc">:name:</span> <span class="nf">modal-lg-body-demo</span>
+  <span class="nc">:lg:</span>
+
+<span class="p">  ..</span> <span class="ow">modal-body</span><span class="p">::</span> One fine body...
+
+    and another fine one here, inside a <span class="s">``.modal-lg``</span>.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<button class="btn btn-link" data-toggle="modal" data-target="#modal-lg-body-demo" type="button">Open modal-lg with body only</button>
+<div class="modal fade" id="modal-lg-body-demo" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-body">
+<p>One fine body…</p>
+<p>and another fine one here, inside a <code class="docutils literal"><span class="pre">.modal-lg</span></code>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="panel">
+<div class="page-header"><h1>Panel<a class="headerlink" href="#panel" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item"><span class="fa fa-link fa-fw text-muted"></span> <a class="reference external" href="https://getbootstrap.com/docs/3.3/components/#panels">https://getbootstrap.com/docs/3.3/components/#panels</a></li>
+</ul>
+<div class="literal-block-wrapper" id="id32">
+<div class="code-block-caption"><span class="caption-text">Optional CSS</span><a class="headerlink" href="#id32" title="Permalink to this code">¶</a></div>
+<div class="highlight-css literal-block"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">panel-body</span> <span class="nt">p</span><span class="p">:</span><span class="nd">last-child</span> <span class="p">{</span>
+    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id33">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id33" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">panel</span><span class="p">::</span> <span class="c">&lt;HeadingText&gt;</span>
+  <span class="nc">:class:</span> <span class="c">&lt;Class&gt;</span>
+  <span class="nc">:panel-title:</span> <span class="c">&lt;Flag&gt; [Wrap heading in a panel-title]</span>
+  <span class="nc">:name:</span> <span class="c">&lt;HTML ID&gt;</span>
+
+<span class="c">  &lt;Content&gt;</span>
+<span class="c">  &lt;Table&gt;</span>
+<span class="c">  &lt;List&gt;</span>
+
+<span class="p">  ..</span> <span class="ow">panel-footer</span><span class="p">::</span> <span class="c">&lt;FooterText&gt;</span>
+    <span class="nc">:class:</span> <span class="c">&lt;Class&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="panel-simple">
+<h2>Panel Simple<a class="headerlink" href="#panel-simple" title="Permalink to this headline">¶</a></h2>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">panel</span><span class="p">::</span>
+
+  A default panel with no header or footer.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="panel panel-default">
+<div class="panel-body">
+<p>A default panel with no header or footer.</p>
+</div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="panel-heading">
+<h2>Panel Heading<a class="headerlink" href="#panel-heading" title="Permalink to this headline">¶</a></h2>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">panel</span><span class="p">::</span> <span class="na">:fa:</span><span class="nv">`fw book tm`</span>  Regular Panel Heading
+
+  A default panel with a heading (<span class="gs">**not inside**</span> a <span class="s">``.panel-title``</span>).
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="panel panel-default">
+<div class="panel-heading"><span class="fa fa-fw fa-book text-muted"></span> Regular Panel Heading</div>
+<div class="panel-body">
+<p>A default panel with a heading (<strong>not inside</strong> a <code class="docutils literal"><span class="pre">.panel-title</span></code>).</p>
+</div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id34">
+<div class="code-block-caption"><span class="caption-text">Provide the <code class="docutils literal"><span class="pre">:panel-title:</span></code> flag to wrap the heading in a <code class="docutils literal"><span class="pre">.panel-title</span></code></span><a class="headerlink" href="#id34" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">panel</span><span class="p">::</span> <span class="na">:fa:</span><span class="nv">`fw book`</span>  Panel Title
+<span class="hll">  <span class="nc">:panel-title:</span>
+</span>
+  A default panel with a heading (<span class="gs">**inside**</span> a <span class="s">``.panel-title``</span>).
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="panel panel-default">
+<div class="panel-heading"><p class="panel-title"><span class="fa fa-fw fa-book"></span> Panel Title</p></div>
+<div class="panel-body">
+<p>A default panel with a heading (<strong>inside</strong> a <code class="docutils literal"><span class="pre">.panel-title</span></code>).</p>
+</div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="panel-footer">
+<h2>Panel Footer<a class="headerlink" href="#panel-footer" title="Permalink to this headline">¶</a></h2>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">panel</span><span class="p">::</span>
+
+  Body content
+
+<span class="p">  ..</span> <span class="ow">panel-footer</span><span class="p">::</span>
+    <span class="nc">:class:</span> <span class="nf">text-right text-muted</span>
+
+    <span class="gs">**Note:**</span> This is in the footer
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="panel panel-default">
+<div class="panel-body">
+<p>Body content</p>
+</div>
+<div class="panel-footer text-right text-muted">
+<strong>Note:</strong> This is in the footer
+</div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="panel-list">
+<h2>Panel List<a class="headerlink" href="#panel-list" title="Permalink to this headline">¶</a></h2>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">panel-success</span><span class="p">::</span> Panel List
+
+  <span class="m">-</span> <span class="s">`List 1 </span><span class="si">&lt;https://google.com&gt;</span><span class="s">`_</span>
+  <span class="m">-</span> <span class="s">`List 2 </span><span class="si">&lt;https://google.com&gt;</span><span class="s">`_</span>
+  <span class="m">-</span> <span class="s">`List 3 </span><span class="si">&lt;https://google.com&gt;</span><span class="s">`_</span>
+
+  This paragraph is rendered inside the <span class="s">``.panel-body``</span>, the list above is not.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="panel panel-success">
+<div class="panel-heading">Panel List</div>
+<ul class="list-group">
+<li class="list-group-item"><a class="reference external" href="https://google.com">List 1</a></li>
+<li class="list-group-item"><a class="reference external" href="https://google.com">List 2</a></li>
+<li class="list-group-item"><a class="reference external" href="https://google.com">List 3</a></li>
+</ul>
+<div class="panel-body">
+<p>This paragraph is rendered inside the <code class="docutils literal"><span class="pre">.panel-body</span></code>, the list above is not.</p>
+</div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="panel-table">
+<h2>Panel Table<a class="headerlink" href="#panel-table" title="Permalink to this headline">¶</a></h2>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">panel-primary</span><span class="p">::</span> Panel Table
+  <span class="nc">:panel-title:</span>
+
+  This paragraph is rendered inside the <span class="s">``.panel-body``</span>, the table below is not.
+
+<span class="p">  ..</span> <span class="ow">table</span><span class="p">::</span>
+    <span class="nc">:class:</span> <span class="nf">table-bordered table-striped table-hover table-condensed</span>
+    <span class="nc">:widths:</span> <span class="nf">auto</span>
+    <span class="nc">:align:</span> <span class="nf">center</span>
+
+    =====  =====  =======
+      x      y       z
+    =====  =====  =======
+      1      2       3
+      1      3       4
+      1      4       5
+    =====  =====  =======
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="panel panel-primary">
+<div class="panel-heading"><p class="panel-title">Panel Table</p></div>
+<div class="panel-body">
+<p>This paragraph is rendered inside the <code class="docutils literal"><span class="pre">.panel-body</span></code>, the table below is not.</p>
+</div>
+<table class="table table-bordered table-striped table-hover table-condensed colwidths-auto">
+<colgroup>
+<col width="29%" />
+<col width="29%" />
+<col width="41%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">x</th>
+<th class="head">y</th>
+<th class="head">z</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>4</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="progress-bar">
+<div class="page-header"><h1>Progress Bar<a class="headerlink" href="#progress-bar" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item"><span class="fa fa-link fa-fw text-muted"></span> <a class="reference external" href="https://getbootstrap.com/docs/3.3/components/#progress">https://getbootstrap.com/docs/3.3/components/#progress</a></li>
+<li class="list-group-item"><span class="fa fa-link fa-fw text-muted"></span> <a class="reference external" href="https://getbootstrap.com/docs/3.3/components/#progress-stacked">https://getbootstrap.com/docs/3.3/components/#progress-stacked</a></li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id35">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id35" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">progress-bar</span><span class="p">::</span> <span class="c">&lt;IntegerValue&gt; [25,25%]</span>
+  <span class="nc">:class:</span> <span class="c">&lt;Class&gt;</span>
+  <span class="nc">:label:</span> <span class="c">&lt;Text&gt; {# Text to display inside the progress bar #}</span>
+  <span class="nc">:value:</span> <span class="c">&lt;IntegerValue&gt; [25,25%]</span>
+  <span class="nc">:min:</span> <span class="c">&lt;Integer&gt; [0]</span>
+  <span class="nc">:max:</span> <span class="c">&lt;Integer&gt; [100]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id36">
+<div class="code-block-caption"><span class="caption-text">Contextual</span><a class="headerlink" href="#id36" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">progress-bar</span><span class="p">::</span> 20
+<span class="p">..</span> <span class="ow">progress-bar-success</span><span class="p">::</span> 40
+<span class="p">..</span> <span class="ow">progress-bar-info</span><span class="p">::</span> 60
+<span class="p">..</span> <span class="ow">progress-bar-warning</span><span class="p">::</span> 80
+<span class="p">..</span> <span class="ow">progress-bar-danger</span><span class="p">::</span> 100%
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="progress">
+<div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;"></div>
+</div><div class="progress">
+<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+</div><div class="progress">
+<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+</div><div class="progress">
+<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+</div><div class="progress">
+<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id37">
+<div class="code-block-caption"><span class="caption-text">Striped or Active</span><a class="headerlink" href="#id37" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">progress-bar-success</span><span class="p">::</span> 40
+  <span class="nc">:class:</span> <span class="nf">striped active</span>
+  <span class="nc">:label:</span> <span class="nf">striped active</span>
+
+<span class="p">..</span> <span class="ow">progress-bar-info</span><span class="p">::</span> 60
+  <span class="nc">:class:</span> <span class="nf">striped</span>
+  <span class="nc">:label:</span> <span class="nf">striped</span>
+
+<span class="p">..</span> <span class="ow">progress-bar-warning</span><span class="p">::</span> 80
+  <span class="nc">:class:</span> <span class="nf">striped</span>
+  <span class="nc">:label:</span> <span class="nf">Striped</span>
+
+<span class="p">..</span> <span class="ow">progress-bar-danger</span><span class="p">::</span> 100%
+  <span class="nc">:class:</span> <span class="nf">striped active</span>
+  <span class="nc">:label:</span> <span class="nf">striped active</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="progress">
+<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">striped active</div>
+</div><div class="progress">
+<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">striped</div>
+</div><div class="progress">
+<div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">Striped</div>
+</div><div class="progress">
+<div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">striped active</div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id38">
+<div class="code-block-caption"><span class="caption-text">Wrap multiple <cite>progress-bars</cite> in a <cite>progress-stack</cite> to stack them</span><a class="headerlink" href="#id38" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">progress-stack</span><span class="p">::</span>
+
+<span class="p">  ..</span> <span class="ow">progress-bar-info</span><span class="p">::</span> 25%
+    <span class="nc">:label:</span> <span class="nf">Step 1</span>
+
+<span class="p">  ..</span> <span class="ow">progress-bar-warning</span><span class="p">::</span> 25%
+    <span class="nc">:label:</span> <span class="nf">Step 2</span>
+
+<span class="p">  ..</span> <span class="ow">progress-bar-success</span><span class="p">::</span> 25%
+    <span class="nc">:label:</span> <span class="nf">Step 3</span>
+
+<span class="p">  ..</span> <span class="ow">progress-bar</span><span class="p">::</span> 25%
+    <span class="nc">:label:</span> <span class="nf">Step 4</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div class="progress">
+<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">Step 1</div>
+<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">Step 2</div>
+<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">Step 3</div>
+<div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">Step 4</div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="tables">
+<div class="page-header"><h1>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12">
+<ul class="list-group">
+<li class="list-group-item"><span class="fa fa-link fa-fw text-muted"></span> <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html#table">http://docutils.sourceforge.net/docs/ref/rst/directives.html#table</a></li>
+<li class="list-group-item"><span class="fa fa-link fa-fw text-muted"></span> <a class="reference external" href="https://getbootstrap.com/docs/3.3/css/#tables">https://getbootstrap.com/docs/3.3/css/#tables</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id39">
+<div class="code-block-caption"><span class="caption-text"><cite>“table-“</cite> is automatically prepended for bootstrap classes</span><a class="headerlink" href="#id39" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">table</span><span class="p">::</span> Table caption
+  <span class="nc">:class:</span> <span class="nf">bordered striped hover condensed</span>
+  <span class="nc">:widths:</span> <span class="nf">auto</span>
+  <span class="nc">:align:</span> <span class="nf">left</span>
+
+  =====  =====  =======
+    x      y       z
+  =====  =====  =======
+    1      2       3
+    1      3       4
+    1      4       5
+  =====  =====  =======
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<table class="table table-bordered table-striped table-hover table-condensed colwidths-auto" id="id40">
+<span class="caption-text"><caption>Table caption</span><a class="headerlink" href="#id40" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="29%" />
+<col width="29%" />
+<col width="41%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">x</th>
+<th class="head">y</th>
+<th class="head">z</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>4</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="tabs">
+<div class="page-header"><h1>Tabs<a class="headerlink" href="#tabs" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<ul class="list-group">
+<li class="list-group-item"><span class="fa fa-info-circle fa-fw text-muted"></span> <a class="reference external" href="https://getbootstrap.com/docs/3.3/javascript/#tabs">https://getbootstrap.com/docs/3.3/javascript/#tabs</a></li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="literal-block-wrapper" id="id41">
+<div class="code-block-caption"><span class="caption-text">Option List</span><a class="headerlink" href="#id41" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest-demo literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">tabs</span><span class="p">::</span> <span class="c">&lt;Class&gt;</span>
+
+<span class="p">  ..</span> <span class="ow">tab</span><span class="p">::</span> <span class="c">&lt;TabTitle&gt;</span>
+
+<span class="c">    &lt;Content&gt;</span>
+
+<span class="p">  ..</span> <span class="ow">tab</span><span class="p">::</span> <span class="c">&lt;TabTitle&gt;</span>
+
+<span class="c">    &lt;Content&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id42">
+<div class="code-block-caption"><span class="caption-text">Tabs with icons</span><a class="headerlink" href="#id42" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">tabs</span><span class="p">::</span>
+  <span class="nc">:name:</span> <span class="nf">demo-tabs-1</span>
+
+<span class="p">  ..</span> <span class="ow">tab</span><span class="p">::</span> <span class="na">:fa:</span><span class="nv">`book fw`</span>  Tab #1
+
+<span class="p">    ..</span> <span class="ow">note</span><span class="p">::</span> Content for tab #1.
+
+<span class="p">  ..</span> <span class="ow">tab</span><span class="p">::</span> <span class="na">:fa:</span><span class="nv">`user-o fw`</span>  Tab #2
+
+<span class="p">    ..</span> <span class="ow">hint</span><span class="p">::</span> Content for tab #2.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<div id="demo-tabs-1">
+<ul class="nav nav-tabs" role="tablist">
+<li class="active" role="presentation"><a class="reference internal" data-toggle="tab" href="#tab-pane-tab-1" role="tab"><span class="fa fa-book fa-fw"></span> Tab #1</a></li>
+<li role="presentation"><a class="reference internal" data-toggle="tab" href="#tab-pane-tab-2" role="tab"><span class="fa fa-user-o fa-fw"></span> Tab #2</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tab-pane-tab-1" role="tabpanel">
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Content for tab #1.</p>
+</div>
+</div>
+<div class="tab-pane" id="tab-pane-tab-2" role="tabpanel">
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">Content for tab #2.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id43">
+<div class="code-block-caption"><span class="caption-text">Add some borders</span><a class="headerlink" href="#id43" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">css</span><span class="p">::</span>
+
+  .tab-content {
+    border: 1px solid #ddd;
+    border-top: none;
+    padding: 10px;
+  }
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="badge-labels">
+<div class="page-header"><h1>Badge &amp; Labels<a class="headerlink" href="#badge-labels" title="Permalink to this headline">¶</a></h1>
+</div><div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id44">
+<div class="code-block-caption"><span class="caption-text">Badge</span><a class="headerlink" href="#id44" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="na">:badge:</span><span class="nv">`42`</span>
+
+<span class="s">`Inbox </span><span class="si">&lt;#&gt;</span><span class="s">`_</span> <span class="na">:badge:</span><span class="nv">`42`</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<p><span class="badge">42</span></p>
+<p><a class="reference external" href="#">Inbox</a> <span class="badge">42</span></p>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id45">
+<div class="code-block-caption"><span class="caption-text">Labels</span><a class="headerlink" href="#id45" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="na">:label-default:</span><span class="nv">`Default`</span>
+
+<span class="na">:label-primary:</span><span class="nv">`Primary`</span>
+
+<span class="na">:label-success:</span><span class="nv">`Success`</span>
+
+<span class="na">:label-info:</span><span class="nv">`Info`</span>
+
+<span class="na">:label-warning:</span><span class="nv">`Warning`</span>
+
+<span class="na">:label-danger:</span><span class="nv">`Danger`</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<p><span class="label label-default">Default</span></p>
+<p><span class="label label-primary">Primary</span></p>
+<p><span class="label label-success">Success</span></p>
+<p><span class="label label-info">Info</span></p>
+<p><span class="label label-warning">Warning</span></p>
+<p><span class="label label-danger">Danger</span></p>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="inline-backgrounds">
+<div class="page-header"><h1>Inline Backgrounds<a class="headerlink" href="#inline-backgrounds" title="Permalink to this headline">¶</a></h1>
+</div><p>Helper classes: <a class="reference external" href="http://getbootstrap.com/css/#helper-classes">http://getbootstrap.com/css/#helper-classes</a></p>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="na">:bg-primary:</span><span class="nv">`Nullam id dolor id nibh ultricies vehicula ut id elit.`</span>
+
+<span class="na">:bg-success:</span><span class="nv">`Duis mollis, est non commodo luctus, nisi erat porttitor ligula.`</span>
+
+<span class="na">:bg-info:</span><span class="nv">`Maecenas sed diam eget risus varius blandit sit amet non magna.`</span>
+
+<span class="na">:bg-warning:</span><span class="nv">`Etiam porta sem malesuada magna mollis euismod.`</span>
+
+<span class="na">:bg-danger:</span><span class="nv">`Donec ullamcorper nulla non metus auctor fringilla.`</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<p><span class="bg-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</span></p>
+<p><span class="bg-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</span></p>
+<p><span class="bg-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</span></p>
+<p><span class="bg-warning">Etiam porta sem malesuada magna mollis euismod.</span></p>
+<p><span class="bg-danger">Donec ullamcorper nulla non metus auctor fringilla.</span></p>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="font-awesome">
+<div class="page-header"><h1>Font Awesome<a class="headerlink" href="#font-awesome" title="Permalink to this headline">¶</a></h1>
+</div><div class="row">
+<div class="col-xs-12 col-md-8">
+<ul class="list-group">
+<li class="list-group-item"><span class="fa fa-info-circle fa-fw text-muted"></span>Use the shortcuts to apply floats and colors</li>
+<li class="list-group-item"><span class="fa fa-info-circle fa-fw text-muted"></span>We collapse a space to the left or right if it exists (add an extra space if you want to include it)</li>
+<li class="list-group-item"><span class="fa fa-info-circle fa-fw text-muted"></span>The <code class="docutils literal"><span class="pre">fa-</span></code> in the class name is <cite>optional</cite></li>
+</ul>
+</div>
+<div class="col-xs-12 col-md-4">
+<div class="panel panel-default">
+<div class="panel-heading"><p class="panel-title">Shortcut Classes</p></div>
+<table class="table table-bordered table-striped table-hover table-condensed colwidths-auto">
+<colgroup>
+<col width="41%" />
+<col width="59%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Shortcut</th>
+<th class="head">Expanded</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>pr</td>
+<td>pull-right</td>
+</tr>
+<tr class="row-odd"><td>pl</td>
+<td>pull-left</td>
+</tr>
+<tr class="row-even"><td>tm</td>
+<td>text-muted</td>
+</tr>
+<tr class="row-odd"><td>tp</td>
+<td>text-primary</td>
+</tr>
+<tr class="row-even"><td>ts</td>
+<td>text-success</td>
+</tr>
+<tr class="row-odd"><td>ti</td>
+<td>text-info</td>
+</tr>
+<tr class="row-even"><td>tw</td>
+<td>text-warning</td>
+</tr>
+<tr class="row-odd"><td>td</td>
+<td>text-danger</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<hr />
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="na">:fa:</span><span class="nv">`rocket 4x`</span>
+<span class="na">:fa:</span><span class="nv">`book 4x`</span>
+<span class="na">:fa:</span><span class="nv">`user 4x`</span>
+<span class="na">:fa:</span><span class="nv">`caret-right 4x`</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<span class="fa fa-rocket fa-4x"></span>
+<span class="fa fa-book fa-4x"></span>
+<span class="fa fa-user fa-4x"></span>
+<span class="fa fa-caret-right fa-4x"></span>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="na">:fa:</span><span class="nv">`refresh 4x spin`</span>
+<span class="na">:fa:</span><span class="nv">`refresh pulse 4x spin`</span>
+<span class="na">:fa:</span><span class="nv">`spinner pulse 4x spin`</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<span class="fa fa-refresh fa-4x fa-spin"></span>
+<span class="fa fa-refresh fa-pulse fa-4x fa-spin"></span>
+<span class="fa fa-spinner fa-pulse fa-4x fa-spin"></span>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="na">:h3:</span><span class="nv">`:fa:`</span>quote-left border\`  Some bold text  <span class="na">:fa:</span><span class="nv">`quote-right border`</span>`
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<p class="h3"><span class="fa fa-quote-left fa-border"></span> Some bold text <span class="fa fa-quote-right fa-border"></span></p>
+
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="inline-heading">
+<div class="page-header"><h1>Inline Heading<a class="headerlink" href="#inline-heading" title="Permalink to this headline">¶</a></h1>
+</div><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">These are rendered as <code class="docutils literal"><span class="pre">&lt;p</span> <span class="pre">class=&quot;h1&quot;&gt;&lt;/p&gt;</span></code> tags, use restructuredText to manage your document headings. These can be used for decorative purposes.</p>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="na">:h1:</span><span class="nv">`:fa:`</span>book fw\` h1. Bootstrap heading <span class="na">:fa:</span><span class="nv">`check text-success fw pr\`</span>`
+
+<span class="na">:h2:</span><span class="nv">`:fa:`</span>book fw\` h2. Bootstrap heading`
+
+<span class="na">:h3:</span><span class="nv">`:fa:`</span>book fw\` h3. Bootstrap heading`
+
+<span class="na">:h4:</span><span class="nv">`:fa:`</span>book fw\` h4. Bootstrap heading`
+
+<span class="na">:h5:</span><span class="nv">`:fa:`</span>book fw\` h5. Bootstrap heading`
+
+<span class="na">:h6:</span><span class="nv">`:fa:`</span>book fw\` h6. Bootstrap heading <span class="na">:fa:</span><span class="nv">`check text-success fw pr\`</span>`
+
+<span class="cp">..               ↑</span>
+<span class="cp">.. ⚠️ You must escape the last back tick when using a role within a role</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<p class="h1"><span class="fa fa-book fa-fw"></span>h1. Bootstrap heading<span class="fa fa-check text-success fa-fw fa-pull-right"></span></p>
+<p class="h2"><span class="fa fa-book fa-fw"></span>h2. Bootstrap heading</p>
+<p class="h3"><span class="fa fa-book fa-fw"></span>h3. Bootstrap heading</p>
+<p class="h4"><span class="fa fa-book fa-fw"></span>h4. Bootstrap heading</p>
+<p class="h5"><span class="fa fa-book fa-fw"></span>h5. Bootstrap heading</p>
+<p class="h6"><span class="fa fa-book fa-fw"></span>h6. Bootstrap heading<span class="fa fa-check text-success fa-fw fa-pull-right"></span></p>
+
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="text-helpers">
+<div class="page-header"><h1>Text Helpers<a class="headerlink" href="#text-helpers" title="Permalink to this headline">¶</a></h1>
+</div><div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id46">
+<div class="code-block-caption"><span class="caption-text">Contextual</span><a class="headerlink" href="#id46" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="na">:text-muted:</span><span class="nv">`Muted Text`</span>
+
+<span class="na">:text-primary:</span><span class="nv">`Primary Text`</span>
+
+<span class="na">:text-success:</span><span class="nv">`Success Text`</span>
+
+<span class="na">:text-info:</span><span class="nv">`Info Text`</span>
+
+<span class="na">:text-warning:</span><span class="nv">`Warning Text`</span>
+
+<span class="na">:text-danger:</span><span class="nv">`Danger Text`</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<p><span class="text-muted">Muted Text</span></p>
+<p><span class="text-primary">Primary Text</span></p>
+<p><span class="text-success">Success Text</span></p>
+<p><span class="text-info">Info Text</span></p>
+<p><span class="text-warning">Warning Text</span></p>
+<p><span class="text-danger">Danger Text</span></p>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id47">
+<div class="code-block-caption"><span class="caption-text">Inline Text</span><a class="headerlink" href="#id47" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="na">:kbd:</span><span class="nv">`Ctrl + Alt + K`</span>
+
+<span class="na">:ins:</span><span class="nv">`Some inserted text`</span>
+
+<span class="na">:mark:</span><span class="nv">`Marked text`</span>
+
+<span class="na">:del:</span><span class="nv">`Deleted text`</span>
+
+<span class="na">:strike:</span><span class="nv">`Strikethrough text`</span>
+
+<span class="na">:underline:</span><span class="nv">`Underlined text`</span>
+
+<span class="na">:var:</span><span class="nv">`some variable`</span>
+
+<span class="na">:samp:</span><span class="nv">`some sample text`</span>
+
+<span class="na">:sup:</span><span class="nv">`Superscript`</span>
+
+<span class="na">:sub:</span><span class="nv">`Subscript`</span>
+
+<span class="na">:abbr:</span><span class="nv">`HTML &lt;Hyper text markup language&gt;`</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<p><kbd>Ctrl + Alt + K</kbd></p>
+<p><ins>Some inserted text</ins></p>
+<p><mark>Marked text</mark></p>
+<p><del>Deleted text</del></p>
+<p><s>Strikethrough text</s></p>
+<p><u>Underlined text</u></p>
+<p><var>some variable</var></p>
+<p><samp>some sample text</samp></p>
+<p><sup>Superscript</sup></p>
+<p><sub>Subscript</sub></p>
+<p><abbr title="Hyper text markup language">HTML</abbr></p>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id48">
+<div class="code-block-caption"><span class="caption-text">Alignment</span><a class="headerlink" href="#id48" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="na">:text-left:</span><span class="nv">`Left aligned text`</span>
+
+<span class="na">:text-center:</span><span class="nv">`Center aligned text`</span>
+
+<span class="na">:text-right:</span><span class="nv">`Right aligned text`</span>
+
+<span class="na">:text-justify:</span><span class="nv">`Justified aligned text`</span>
+
+<span class="na">:text-nowrap:</span><span class="nv">`nowrap text`</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<p class="text-left">Left aligned text</p>
+<p class="text-center">Center aligned text</p>
+<p class="text-right">Right aligned text</p>
+<p class="text-justify">Justified aligned text</p>
+<p class="text-nowrap">nowrap text</p>
+
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="literal-block-wrapper" id="id49">
+<div class="code-block-caption"><span class="caption-text">Transformation</span><a class="headerlink" href="#id49" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span><span class="na">:text-lowercase:</span><span class="nv">`Lower Case Text`</span>
+
+<span class="na">:text-uppercase:</span><span class="nv">`upper case text`</span>
+
+<span class="na">:text-capitalize:</span><span class="nv">`capitalised text`</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<p><span class="text-lowercase">Lower Case Text</span></p>
+<p><span class="text-uppercase">upper case text</span></p>
+<p><span class="text-capitalize">capitalised text</span></p>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+<hr />
+<div class="section" id="tooltips">
+<div class="page-header"><h1>Tooltips<a class="headerlink" href="#tooltips" title="Permalink to this headline">¶</a></h1>
+</div><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>This is opt-in, You must initialize tooltip for yourself.</p>
+<div class="last highlight-javascript literal-block"><div class="highlight"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[data-toggle=&quot;tooltip&quot;]&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="row example-row">
+<div class="col-xs-12 col-sm-6">
+<div class="rest-source">
+<div class="highlight-rest literal-block"><div class="highlight"><pre><span></span>Text for a <span class="na">:tooltip-top:</span><span class="nv">`tooltip-top &lt;Demo Text&gt;`</span>, the end.
+
+Text for a <span class="na">:tooltip-bottom:</span><span class="nv">`tooltip-bottom &lt;Demo Text&gt;`</span>, the end.
+
+Text for a <span class="na">:tooltip-left:</span><span class="nv">`:fa:`</span>file-pdf-o\` tooltip-left &lt;Demo Text&gt;`, the end.
+
+Text for a <span class="na">:tooltip-right:</span><span class="nv">`:fa:`</span>info\`  tooltip-right &lt;Demo Text&gt;`, the end.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="browser-preview">
+<div>
+<p>Text for a <span class="tooltip-text" data-placement="top" data-toggle="tooltip" title="Demo Text">tooltip-top</span>, the end.</p>
+<p>Text for a <span class="tooltip-text" data-placement="bottom" data-toggle="tooltip" title="Demo Text">tooltip-bottom</span>, the end.</p>
+<p>Text for a <span class="tooltip-text" data-placement="left" data-toggle="tooltip" title="Demo Text"><span class="fa fa-file-pdf-o"></span>tooltip-left</span>, the end.</p>
+<p>Text for a <span class="tooltip-text" data-placement="right" data-toggle="tooltip" title="Demo Text"><span class="fa fa-info"></span> tooltip-right</span>, the end.</p>
+</div>
+</div>
+<hr class="hidden visible-xs-block"/>
+</div>
+</div>
+</div>
+
+
+                      </div>
+                  </div>
+              </div>
+        </div>
+    </main>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="footer well" role="contentinfo">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6 text-left">
+                            <a href="https://github.com/lakhman/restructuredBootstrap"><span class="fa fa-github"></span> Star us on Github</a>
+                        </div>
+                        <div class="col-xs-12 col-md-6 text-right">
+                                &#169; Copyright 2017, Anil Lakhman.
+                              Created using <a href="http://sphinx-doc.org/">Sphinx 1.6.3</a>.
+                        </div>
+                    </div>
+                </div>
+                <div class="sizer">
+                    <div class="device-check visible-xs" data-device="xs" data-order="1"></div>
+                    <div class="device-check visible-sm" data-device="sm" data-order="2"></div>
+                    <div class="device-check visible-md" data-device="md" data-order="3"></div>
+                    <div class="device-check visible-lg" data-device="lg" data-order="4"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+  <script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script async defer src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+  </body>
+</html>
